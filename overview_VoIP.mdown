@@ -6,7 +6,7 @@ CISCO VoIP
 * VoIP is a Layer 3 network protocol
 
 * VoIP uses various link-layer protocols <br>
-Exemples
+__Exemples:__
 	* PPP
 	* Frame Relay
 	* ATM 
@@ -67,7 +67,7 @@ Like other VoIP protocols, SIP is designed to address the functions of signaling
 
 #### DTMF (Dual-tone multi-frequency)
 
-#### Cisco Unified Communications architecture
+# Cisco Unified Communications architecture
 
 The Cisco Unified Communications system fully integrates communications by enabling data, voice, and video to be transmitted over a single network infrastructure using standards-based IP.
 The Cisco Unified Communications system provides and maintains a high level of __availability__, __quality of service (QoS)__, and __security__ for the network.
@@ -77,11 +77,51 @@ __The Cisco Unified Communications system incorporates and integrates the follow
 * __IP telephony__: 
 IP telephony refers to technology that transmits voice communications over a network using IP standards. Cisco Unified Communications includes hardware and software products such as call-processing agents, IP phones (both wired and wireless), voice-messaging systems, video devices, and many special applications.
 
-* __Customer contact center__: Cisco IP Contact Center products combine strategy with architecture to enable efficient and effective customer communications across a globally capable network. This strategy allows organizations to draw from a broader range of resources to service customers. These resources include access to a large pool of agents and multiple channels of communication as well as customer self-help tools.
+* __Customer contact center__: 
+Cisco IP Contact Center products combine strategy with architecture to enable efficient and effective customer communications across a globally capable network. This strategy allows organizations to draw from a broader range of resources to service customers. These resources include access to a large pool of agents and multiple channels of communication as well as customer self-help tools.
   
-* __Video telephony__: Cisco Unified Video Advantage products enable real-time video communications and collaboration using the same IP network and call-processing agent as Cisco Unified Communications. With Cisco Unified Video Advantage, making a video call is just as easy as dialing a phone number.
+* __Video telephony__: 
+Cisco Unified Video Advantage products enable real-time video communications and collaboration using the same IP network and call-processing agent as Cisco Unified Communications. With Cisco Unified Video Advantage, making a video call is just as easy as dialing a phone number.
  
-* __Rich-media conferencing__: Cisco Conference Connection and Cisco Unified MeetingPlace enhance the virtual meeting environment with an integrated set of IP-based tools for voice, video, and web conferencing.
+* __Rich-media conferencing__: 
+Cisco Conference Connection and Cisco Unified MeetingPlace enhance the virtual meeting environment with an integrated set of IP-based tools for voice, video, and web conferencing.
 
-* __Third-party applications__: Cisco works with cutting-edge companies to provide a broad selection of third-party IP communications applications and products. These third-party applications help businesses focus on critical needs such as messaging, customer care, and workforce optimization.
+* __Third-party applications__: 
+Cisco works with cutting-edge companies to provide a broad selection of third-party IP communications applications and products. These third-party applications help businesses focus on critical needs such as messaging, customer care, and workforce optimization.
+
+# VoIP Essentials
+
+VoIP is the family of technologies that allow IP networks to be used for voice applications such as telephony, voice instant messaging, and teleconferencing. <br>
+VoIP defines a way to carry voice calls over an IP network, including how voice streams are digitized and packetized. IP telephony utilizes VoIP standards to create a telephony system where higher-level features, such as advanced call routing, voice mail, contact centers, and so on, can be utilized.
+VoIP services convert your voice into a digital signal that travels over the Internet. If you are calling a traditional phone number, the signal is converted to a traditional telephone signal before it reaches the destination.
+
+VoIP allows to make a call directly from 
+	* __a computer__
+	* __a special VoIP phone__
+	* __a traditional phone connected to a special adapter__
+
+In addition, wireless “hot spots” in locations such as airports, parks, and cafes that allow you to connect to the Internet may enable you to use VoIP service.
+
+# Business Case
+
+Provides
+* Cost savings
+* Flexibility
+* Advanced features
+Some examples of the advanced features provided by current VoIP applications
+	* Advanced call routing:<br>
+	When multiple paths exist to connect a call to its destination, some of these paths may be preferred over others based on cost, distance, quality, partner handoffs, traffic load, or various other considerations.
+	Least-cost routing and time-of-day routing are two examples of advanced call routing that can be implemented to determine the best possible route for each call.
+	* Unified messaging: <br>
+	Unified messaging improves communications and productivity. It provides a single user interface for messages that have been delivered over a variety of media. For example, users can read their e-mail, hear their voice mail, and view fax messages by accessing a single inbox.
+	* Integrated information systems: <br>
+	Organizations use VoIP to affect business process transformation. These processes include centralized call control, geographically dispersed virtual contact centers, and access to resources and self-help tools.
+	* Long-distance toll bypass: <br>
+	Long-distance toll bypass is an attractive solution for organizations that place a significant number of calls between sites that are charged traditional long-distance fees. In this case, it may be more cost-effective to use VoIP to place those calls across the IP network. If the IP WAN becomes congested, calls can overflow into the PSTN, ensuring that there is no degradation in voice quality.
+	* Voice security: <br>
+	There are mechanisms in the IP network that allow the administrator to ensure that IP conversations are secure. Encryption of sensitive signaling header fields and message bodies protect the packets in case of unauthorized packet interception.
+	* Customer relationships:<br>
+	 The ability to provide customer support through multiple media such as telephone, chat, and e-mail, builds solid customer satisfaction and loyalty. A pervasive IP network allows organizations to provide contact center agents with consolidated and up-to-date customer records along with the related customer communication. Access to this information allows quick problem solving, which, in turn, builds strong customer relationships.
+	* Telephony application services: <br>
+	Extensible Markup Language (XML) services on Cisco Unified IP phones give users another way to perform or access more business applications. Some examples of XML-based services on IP phones are user stock quotes, inventory checks, direct-dial directory, announcements, and advertisements. The IP phones are equipped with a pixel-based display that can show full graphics instead of just text on the window. The pixel-based display capabilities allow you to use sophisticated graphical presentations for applications on Cisco IP phones and make them available at any desktop, counter, or location.
 
