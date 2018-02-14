@@ -61,11 +61,11 @@ The Cisco SIP implementation enables supported Cisco platforms to signal the set
 
 Like other VoIP protocols, SIP is designed to address the functions of signaling and session management within a packet telephony network. Signaling allows call information to be carried across network boundaries. Session management provides the ability to control the attributes of an end-to-end call.
 
-#### PSTN (public switched telephone network)
+#### PSTN (public switched telephone network) ...
 
-#### DSPs (digital signal processors)
+#### DSPs (digital signal processors) ...
 
-#### DTMF (Dual-tone multi-frequency)
+#### DTMF (Dual-tone multi-frequency) ...
 
 # Cisco Unified Communications architecture
 
@@ -113,7 +113,7 @@ Some examples of the advanced features provided by current VoIP applications
 	When multiple paths exist to connect a call to its destination, some of these paths may be preferred over others based on cost, distance, quality, partner handoffs, traffic load, or various other considerations.
 	__Least-cost routing__ and __time-of-day routing__ are two examples of advanced call routing that can be implemented to determine the best possible route for each call.<br><br>
 	* __Unified messaging:__ <br>
-	Unified messaging improves communications and productivity. It provides a single user interface for messages that have been delivered over a variety of media. For example, users can read their e-mail, hear their voice mail, and view fax messages by accessing a single inbox.<br><br>
+	Unified messaging improves communications and productivity. It provides a single user interface for messages that have been delivered over a variety of media. For example, users can read their __e-mail__, hear their __voice mail__, and view __fax messages__ by accessing a single inbox.<br><br>
 	* __Integrated information systems:__ <br>
 	Organizations use VoIP to affect business process transformation. These processes include centralized call control, geographically dispersed virtual contact centers, and access to resources and self-help tools.<br><br>
 	* __Long-distance toll bypass:__ <br>
@@ -130,9 +130,14 @@ Note:
 >__TOD (time-of-day routing)__ Time of Day routing is a VoIP service that allows for flexibility in an organizations’ working. It permits the routing of incoming phone calls to different phone numbers or to voicemail depending on the time of the day or the day of the week.
 
 
+Virtualization is the creation of a virtual  version of something, such as an operating system, a server, a storage device or network resources.
+
+Operating system virtualization is the use of software to allow a piece of hardware to run multiple operating system images at the same time.
 
 
+# Components of a VoIP Network
 
+![Components](/images/components.png)
 
 
 
