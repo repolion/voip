@@ -48,6 +48,11 @@ An Internet Engineering Task Force (IETF) draft standard for controlling voice g
 IP networks.
 Media Gateway Control Protocol (MGCP) is a plain-text protocol used by call-control devices to manage IP Telephony gateways.
 
+MGCP is a master/slave protocol that allows a call control device (such as Cisco CallManager) to take control of a specific port on a gateway. 
+This has the advantage of centralized gateway administration and provides for largely scalable IP Telephony solutions. With this protocol, the Cisco CallManager knows and controls the state of each individual port on the gateway. It allows complete control of the dial plan from Cisco CallManager, and gives CallManager per-port control of connections to the public switched telephone network (PSTN), legacy PBX, voice mail systems, plain old telephone service (POTS) phones, and so forth. 
+
+Another concept relevant to the MGCP implementation with Cisco CallManager is PRI Backhaul...
+
 #### SIP (Session Initiation Protocol)
 
 It's an pplication-layer control protocol that can be used to establish, maintain, and terminate calls between two or more endpoints. SIP is an alternative protocol developed by the Internet Engineering Task Force (IETF) for multimedia conferencing over IP. SIP features are compliant with IETF RFC 2543, SIP: Session Initiation Protocol, published in March 1999.
