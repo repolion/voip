@@ -69,5 +69,19 @@ Like other VoIP protocols, SIP is designed to address the functions of signaling
 
 #### Cisco Unified Communications architecture
 
-The Cisco Unified Communications system fully integrates communications by enabling data, voice, and video to be transmitted over a single network infrastructure using standards-based IP
+The Cisco Unified Communications system fully integrates communications by enabling data, voice, and video to be transmitted over a single network infrastructure using standards-based IP.
+The Cisco Unified Communications system provides and maintains a high level of __availability__, __quality of service (QoS)__, and __security__ for the network.
+
+The Cisco Unified Communications system incorporates and integrates the following communications technologies:
+
+* __IP telephony__: 
+IP telephony refers to technology that transmits voice communications over a network using IP standards. Cisco Unified Communications includes hardware and software products such as call-processing agents, IP phones (both wired and wireless), voice-messaging systems, video devices, and many special applications.
+
+* __Customer contact center__: Cisco IP Contact Center products combine strategy with architecture to enable efficient and effective customer communications across a globally capable network. This strategy allows organizations to draw from a broader range of resources to service customers. These resources include access to a large pool of agents and multiple channels of communication as well as customer self-help tools.
+  
+* __Video telephony__: Cisco Unified Video Advantage products enable real-time video communications and collaboration using the same IP network and call-processing agent as Cisco Unified Communications. With Cisco Unified Video Advantage, making a video call is just as easy as dialing a phone number.
+ 
+* __Rich-media conferencing__: Cisco Conference Connection and Cisco Unified MeetingPlace enhance the virtual meeting environment with an integrated set of IP-based tools for voice, video, and web conferencing.
+
+* __Third-party applications__: Cisco works with cutting-edge companies to provide a broad selection of third-party IP communications applications and products. These third-party applications help businesses focus on critical needs such as messaging, customer care, and workforce optimization.
 
