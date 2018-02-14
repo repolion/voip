@@ -60,3 +60,7 @@ It's an pplication-layer control protocol that can be used to establish, maintai
 The Cisco SIP implementation enables supported Cisco platforms to signal the setup of voice and multimedia calls over IP networks.
 
 Like other VoIP protocols, SIP is designed to address the functions of signaling and session management within a packet telephony network. Signaling allows call information to be carried across network boundaries. Session management provides the ability to control the attributes of an end-to-end call.
+
+# Basic models used in IP Telephony network
+
+test...
