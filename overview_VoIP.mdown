@@ -96,9 +96,9 @@ VoIP defines a way to carry voice calls over an IP network, including how voice 
 VoIP services convert your voice into a digital signal that travels over the Internet. If you are calling a traditional phone number, the signal is converted to a traditional telephone signal before it reaches the destination.
 
 VoIP allows to make a call directly from 
-	* __a computer__
-	* __a special VoIP phone__
-	* __a traditional phone connected to a special adapter__
+* __a computer__
+* __a special VoIP phone__
+* __a traditional phone connected to a special adapter__
 
 In addition, wireless “hot spots” in locations such as airports, parks, and cafes that allow you to connect to the Internet may enable you to use VoIP service.
 
@@ -111,17 +111,17 @@ Provides
 Some examples of the advanced features provided by current VoIP applications
 	* __Advanced call routing:__ <br>
 	When multiple paths exist to connect a call to its destination, some of these paths may be preferred over others based on cost, distance, quality, partner handoffs, traffic load, or various other considerations.
-	Least-cost routing and time-of-day routing are two examples of advanced call routing that can be implemented to determine the best possible route for each call.<br>
+	Least-cost routing and time-of-day routing are two examples of advanced call routing that can be implemented to determine the best possible route for each call.<br><br>
 	* __Unified messaging:__ <br>
-	Unified messaging improves communications and productivity. It provides a single user interface for messages that have been delivered over a variety of media. For example, users can read their e-mail, hear their voice mail, and view fax messages by accessing a single inbox.<br>
+	Unified messaging improves communications and productivity. It provides a single user interface for messages that have been delivered over a variety of media. For example, users can read their e-mail, hear their voice mail, and view fax messages by accessing a single inbox.<br><br>
 	* __Integrated information systems:__ <br>
-	Organizations use VoIP to affect business process transformation. These processes include centralized call control, geographically dispersed virtual contact centers, and access to resources and self-help tools.<br>
+	Organizations use VoIP to affect business process transformation. These processes include centralized call control, geographically dispersed virtual contact centers, and access to resources and self-help tools.<br><br>
 	* __Long-distance toll bypass:__ <br>
-	Long-distance toll bypass is an attractive solution for organizations that place a significant number of calls between sites that are charged traditional long-distance fees. In this case, it may be more cost-effective to use VoIP to place those calls across the IP network. If the IP WAN becomes congested, calls can overflow into the PSTN, ensuring that there is no degradation in voice quality.<br>
+	Long-distance toll bypass is an attractive solution for organizations that place a significant number of calls between sites that are charged traditional long-distance fees. In this case, it may be more cost-effective to use VoIP to place those calls across the IP network. If the IP WAN becomes congested, calls can overflow into the PSTN, ensuring that there is no degradation in voice quality.<br><br>
 	* __Voice security:__ <br>
-	There are mechanisms in the IP network that allow the administrator to ensure that IP conversations are secure. Encryption of sensitive signaling header fields and message bodies protect the packets in case of unauthorized packet interception.<br>
+	There are mechanisms in the IP network that allow the administrator to ensure that IP conversations are secure. Encryption of sensitive signaling header fields and message bodies protect the packets in case of unauthorized packet interception.<br><br>
 	* __Customer relationships:__ <br>
-	 The ability to provide customer support through multiple media such as telephone, chat, and e-mail, builds solid customer satisfaction and loyalty. A pervasive IP network allows organizations to provide contact center agents with consolidated and up-to-date customer records along with the related customer communication. Access to this information allows quick problem solving, which, in turn, builds strong customer relationships.<br>
+	 The ability to provide customer support through multiple media such as telephone, chat, and e-mail, builds solid customer satisfaction and loyalty. A pervasive IP network allows organizations to provide contact center agents with consolidated and up-to-date customer records along with the related customer communication. Access to this information allows quick problem solving, which, in turn, builds strong customer relationships.<br><br>
 	* __Telephony application services:__ <br>
-	Extensible Markup Language (XML) services on Cisco Unified IP phones give users another way to perform or access more business applications. Some examples of XML-based services on IP phones are user stock quotes, inventory checks, direct-dial directory, announcements, and advertisements. The IP phones are equipped with a pixel-based display that can show full graphics instead of just text on the window. The pixel-based display capabilities allow you to use sophisticated graphical presentations for applications on Cisco IP phones and make them available at any desktop, counter, or location.<br>
+	Extensible Markup Language (XML) services on Cisco Unified IP phones give users another way to perform or access more business applications. Some examples of XML-based services on IP phones are user stock quotes, inventory checks, direct-dial directory, announcements, and advertisements. The IP phones are equipped with a pixel-based display that can show full graphics instead of just text on the window. The pixel-based display capabilities allow you to use sophisticated graphical presentations for applications on Cisco IP phones and make them available at any desktop, counter, or location.<br><br>
 
