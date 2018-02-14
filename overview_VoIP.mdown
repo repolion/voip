@@ -36,24 +36,24 @@ standard such as
 Cisco IOS software supports the following call 
 control protocols and standards in Release 12.2:
 
-#### H.323
+## H.323
 The International Telecommunication Union-Telecommunications Standardization Sector 
 (ITU-T) specification for sending voice, video, and data across a network. The H.323 specification 
 includes several related standards,
  such as H.225 (call control), H.235 (security), H.245 (media path 
 and parameter negotiation), and H.450 (supplementary services).
 
-#### MGCP (Media Gateway Control Protocol)
+## MGCP (Media Gateway Control Protocol)
 An Internet Engineering Task Force (IETF) draft standard for controlling voice gateways through
 IP networks.
 Media Gateway Control Protocol (MGCP) is a plain-text protocol used by call-control devices to manage IP Telephony gateways.
 
 MGCP is a master/slave protocol that allows a call control device (such as Cisco CallManager) to take control of a specific port on a gateway. 
-This has the advantage of centralized gateway administration and provides for largely scalable IP Telephony solutions. With this protocol, the Cisco CallManager knows and controls the state of each individual port on the gateway. It allows complete control of the dial plan from Cisco CallManager, and gives CallManager per-port control of connections to the public switched telephone network (PSTN), legacy PBX, voice mail systems, plain old telephone service (POTS) phones, and so forth. 
+This has the advantage of centralized gateway administration and provides for largely scalable IP Telephony solutions. With this protocol, the __Cisco CallManager__ knows and controls the state of each individual port on the gateway. It allows complete control of the dial plan from Cisco CallManager, and gives CallManager per-port control of connections to the __public switched telephone network (PSTN)__, legacy __PBX__, voice mail systems, __plain old telephone service (POTS)__ phones, and so forth. 
 
 Another concept relevant to the MGCP implementation with Cisco CallManager is PRI Backhaul...
 
-#### SIP (Session Initiation Protocol)
+## SIP (Session Initiation Protocol)
 
 It's an pplication-layer control protocol that can be used to establish, maintain, and terminate calls between two or more endpoints. SIP is an alternative protocol developed by the Internet Engineering Task Force (IETF) for multimedia conferencing over IP. SIP features are compliant with IETF RFC 2543, SIP: Session Initiation Protocol, published in March 1999.
 
