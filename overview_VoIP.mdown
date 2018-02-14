@@ -61,6 +61,13 @@ The Cisco SIP implementation enables supported Cisco platforms to signal the set
 
 Like other VoIP protocols, SIP is designed to address the functions of signaling and session management within a packet telephony network. Signaling allows call information to be carried across network boundaries. Session management provides the ability to control the attributes of an end-to-end call.
 
-# Basic models used in IP Telephony network
+#### PSTN (public switched telephone network)
 
-test...
+#### DSPs (digital signal processors)
+
+#### DTMF (Dual-tone multi-frequency)
+
+#### Cisco Unified Communications architecture
+
+The Cisco Unified Communications system fully integrates communications by enabling data, voice, and video to be transmitted over a single network infrastructure using standards-based IP
+
