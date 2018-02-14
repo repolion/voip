@@ -55,7 +55,7 @@ Another concept relevant to the MGCP implementation with Cisco CallManager is PR
 
 ## SIP (Session Initiation Protocol)
 
-It's an pplication-layer control protocol that can be used to establish, maintain, and terminate calls between two or more endpoints. SIP is an alternative protocol developed by the Internet Engineering Task Force (IETF) for multimedia conferencing over IP. SIP features are compliant with IETF RFC 2543, SIP: Session Initiation Protocol, published in March 1999.
+It's an aplication-layer control protocol that can be used to establish, maintain, and terminate calls between two or more endpoints. SIP is an alternative protocol developed by the Internet Engineering Task Force (IETF) for multimedia conferencing over IP. SIP features are compliant with IETF RFC 2543, SIP: Session Initiation Protocol, published in March 1999.
 
 The Cisco SIP implementation enables supported Cisco platforms to signal the setup of voice and multimedia calls over IP networks.
 
@@ -138,6 +138,26 @@ Operating system virtualization is the use of software to allow a piece of hardw
 # Components of a VoIP Network
 
 ![Components](/images/components.png)
+
+The figure depicts the basic components of a packet voice network:
+
+*__IP phones__: 
+IP phones provide an IP endpoint for voice communication.
+* __Gatekeeper__: 
+The gatekeeper provides Call Admission Control (CAC), bandwidth control and management, and address translation.
+* __Gateway__: 
+The gateway provides translation between VoIP and non-VoIP networks such as the PSTN. Gateways also provide physical access for local analog and digital voice devices such as telephones, fax machines, key sets, and PBXs.
+* __Multipoint control unit__: 
+The multipoint control unit provides real-time connectivity for participants in multiple locations to attend the same videoconference or meeting.
+* __Call agent__: 
+The call agent provides call control for IP phones, CAC, bandwidth control and management, and address translation.
+* __Application servers__:
+Application servers provide services such as voice mail, unified messaging, and Cisco Unified Communications Manager Attendant Console.
+* __Videoconference station__: 
+The videoconference station provides access for end-user participation in videoconferencing. The videoconference station contains a video capture device for video input and a microphone for audio input. The user can view video streams and hear the audio that originates at a remote user station.
+
+Other components, such as software voice applications, interactive voice response (IVR) systems, and softphones, provide additional services to meet the needs of an enterprise site.
+
 
 
 
