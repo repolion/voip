@@ -5,7 +5,7 @@ CISCO VoIP
 
 * VoIP is a Layer 3 network protocol
 
-* VoIP uses various link-layer protocols 
+* VoIP uses various link-layer protocols <br>
 Exemples
 	* PPP
 	* Frame Relay
@@ -72,7 +72,7 @@ Like other VoIP protocols, SIP is designed to address the functions of signaling
 The Cisco Unified Communications system fully integrates communications by enabling data, voice, and video to be transmitted over a single network infrastructure using standards-based IP.
 The Cisco Unified Communications system provides and maintains a high level of __availability__, __quality of service (QoS)__, and __security__ for the network.
 
-The Cisco Unified Communications system incorporates and integrates the following communications technologies:
+__The Cisco Unified Communications system incorporates and integrates the following communications technologies__:
 
 * __IP telephony__: 
 IP telephony refers to technology that transmits voice communications over a network using IP standards. Cisco Unified Communications includes hardware and software products such as call-processing agents, IP phones (both wired and wireless), voice-messaging systems, video devices, and many special applications.
