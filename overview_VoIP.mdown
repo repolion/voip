@@ -111,7 +111,7 @@ Provides
 Some examples of the advanced features provided by current VoIP applications
 	* __Advanced call routing:__ <br>
 	When multiple paths exist to connect a call to its destination, some of these paths may be preferred over others based on cost, distance, quality, partner handoffs, traffic load, or various other considerations.
-	Least-cost routing and time-of-day routing are two examples of advanced call routing that can be implemented to determine the best possible route for each call.<br><br>
+	__Least-cost routing__ and __time-of-day routing__ are two examples of advanced call routing that can be implemented to determine the best possible route for each call.<br><br>
 	* __Unified messaging:__ <br>
 	Unified messaging improves communications and productivity. It provides a single user interface for messages that have been delivered over a variety of media. For example, users can read their e-mail, hear their voice mail, and view fax messages by accessing a single inbox.<br><br>
 	* __Integrated information systems:__ <br>
@@ -124,4 +124,19 @@ Some examples of the advanced features provided by current VoIP applications
 	 The ability to provide customer support through multiple media such as telephone, chat, and e-mail, builds solid customer satisfaction and loyalty. A pervasive IP network allows organizations to provide contact center agents with consolidated and up-to-date customer records along with the related customer communication. Access to this information allows quick problem solving, which, in turn, builds strong customer relationships.<br><br>
 	* __Telephony application services:__ <br>
 	Extensible Markup Language (XML) services on Cisco Unified IP phones give users another way to perform or access more business applications. Some examples of XML-based services on IP phones are user stock quotes, inventory checks, direct-dial directory, announcements, and advertisements. The IP phones are equipped with a pixel-based display that can show full graphics instead of just text on the window. The pixel-based display capabilities allow you to use sophisticated graphical presentations for applications on Cisco IP phones and make them available at any desktop, counter, or location.<br><br>
+
+>__LCR (Least-cost-routing)__ It is the process of selecting the path of outbound communications traffic based on cost.
+>__TOD (time-of-day routing)__ Time of Day routing is a VoIP service that allows for flexibility in an organizations’ working. It permits the routing of incoming phone calls to different phone numbers or to voicemail depending on the time of the day or the day of the week.
+
+
+
+
+
+
+
+
+
+
+
+
 
