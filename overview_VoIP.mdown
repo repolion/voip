@@ -135,6 +135,7 @@ Some examples of the advanced features provided by current VoIP applications
 Note:
 >__LCR (Least-cost-routing)__ It is the process of selecting the path of outbound communications traffic based on cost.
 >__TOD (time-of-day routing)__ Time of Day routing is a VoIP service that allows for flexibility in an organizations’ working. It permits the routing of incoming phone calls to different phone numbers or to voicemail depending on the time of the day or the day of the week.
+__IVR (Interactive Voice Recorder) is a technology that allows a computer to interact with humans through the use of voice and DTMF tones input via a keypad.
 
 # Components of a VoIP Network
 
@@ -177,9 +178,15 @@ H.248, SCCP, and MGCP are examples of client/server protocols in which the endpo
 For example, when an MGCP gateway detects that a telephone has gone off hook, it does not know to automatically provide a dial tone. The gateway sends an event notification to the call agent,telling the agent that an off-hook condition has been detected. The call agent notifies the gateway to provide a dial tone.
 
 * __Database services__: <br>
-Access to services, such as toll-free numbers or caller ID, requires the ability to query a database to determine whether the call can be placed or information can be made available. Database services include access to billing information, caller name (CNAM) delivery, toll-free database services, and calling-card services. VoIP service providers can differentiate their services by providing access to many unique database services. For example, to simplify fax access to mobile users, a provider may build a service that converts fax to e-mail. Another example would be to provide a call notification service that places outbound calls with prerecorded messages at specific times to notify users of such events as school closures, wakeup calls, or appointments.
+Access to services, such as toll-free numbers or caller ID, requires the ability to query a database to determine whether the call can be placed or information can be made available. Database services include access to billing information, caller name (CNAM) delivery, toll-free database services, and calling-card services. VoIP service providers can differentiate their services by providing access to many unique database services. <br><br>
+For example, to simplify fax access to mobile users, a provider may build a service that converts fax to e-mail. Another example would be to provide a call notification service that places outbound calls with prerecorded messages at specific times to notify users of such events as school closures, wakeup calls, or appointments.
 
+* __Codecs__:<br>
+Codecs provide the coding and decoding translation between analog and digital facilities. Each codec type defines the method of voice coding and the compression mechanism that is used to convert the voice stream. The PSTN uses TDM to carry each voice call. Each voice channel reserves 64 kb/s of bandwidth and uses the G.711 codecs to convert the analog voice wave to a 64-kb/s digitized voice stream. In VoIP design, codecs may compress voice beyond the 64-kb/s voice stream to allow more efficient use of network resources. The most widely used codec in the WAN environment is G.729, which compresses the voice stream to 8 kb/s.
 
+# VoIP Signaling Protocols
+
+![Signaling protocols](/images/signalingProtocols.png)
 
 
 
