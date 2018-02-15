@@ -61,20 +61,24 @@ The Cisco SIP implementation enables supported Cisco platforms to signal the set
 
 Like other VoIP protocols, SIP is designed to address the functions of signaling and session management within a packet telephony network. Signaling allows call information to be carried across network boundaries. Session management provides the ability to control the attributes of an end-to-end call.
 
-#### PSTN (public switched telephone network)
+--------------
+
+# Important Knowledge
+
+## PSTN (public switched telephone network)
 
 The __Public Switched Telephone Network__, also known as __Plain Old Telephone Service (POTS)__, is the wired phone system over which landline telephone calls are made. The PSTN relies on circuit switching. To connect one phone to another, the phone call is routed through numerous switches operating on a local, regional, national or international level. The connection established between the two phones is called a circuit.
 <br><br>
 In the early days, phone calls traveled as analog signals across copper wire. Every phone call needed its own dedicated copper wire connecting the two phones. That's why you needed operators' assistance in making calls.
 
-#### DSPs (digital signal processing) 
+## DSPs (digital signal processing) 
 Digital signal processing (DSP) refers to various techniques for improving the accuracy and reliability of digital communications.
 Basically, DSP works by clarifying, or standardizing, the levels or states of a digital signal. ADSP circuit is able to differentiate between human-made signals,which are orderly, and noise, which is inherently chaotic.
 
-#### DTMF (Dual-tone multi-frequency)
+## DTMF (Dual-tone multi-frequency)
 In modern communication systems you are likely not using DTMF. As we move to SIP and other forms of digital communication we are not actually transmitting tones at all. Both when dialing a phone number and when providing touch-tone responses to an IVR you may hear the tone but that is actually your phone playing the tone locally for your benefit. Behind the scenes a DTMF value is sent digitally without any tone being transmitted at all. Depending on the connection between you and the remote system there may never be a tone generated at all.
 
-# Cisco Unified Communications architecture
+## Cisco Unified Communications architecture
 
 The Cisco Unified Communications system fully integrates communications by enabling data, voice, and video to be transmitted over a single network infrastructure using standards-based IP.
 The Cisco Unified Communications system provides and maintains a high level of __availability__, __quality of service (QoS)__, and __security__ for the network.
@@ -96,6 +100,7 @@ Cisco Conference Connection and Cisco Unified MeetingPlace enhance the virtual m
 * __Third-party applications__: 
 Cisco works with cutting-edge companies to provide a broad selection of third-party IP communications applications and products. These third-party applications help businesses focus on critical needs such as messaging, customer care, and workforce optimization.
 
+------------------
 # VoIP Essentials
 
 VoIP is the family of technologies that allow IP networks to be used for voice applications such as telephony, voice instant messaging, and teleconferencing. <br>
@@ -189,14 +194,49 @@ Codecs provide the coding and decoding translation between analog and digital fa
 ![Signaling protocols](/images/signalingProtocols.png)
 
 
-* __H.323__: H.323 is a standard that specifies the components, protocols, and procedures that provide multimedia communication services—real-time audio, video, and data communications—over packet networks, including IP networks. H.323 is part of a family of ITU-T recommendations called H.32x that provides multimedia communication services over a variety of networks. It is actually an umbrella of standards that define all aspects of synchronized voice, video, and data transmission. It also defines end-to-end call signaling.
+* __H.323__: <br> 
+H.323 is a standard that specifies the components, protocols, and procedures that provide multimedia communication services—real-time audio, video, and data communications—over packet networks, including IP networks. H.323 is part of a family of ITU-T recommendations called H.32x that provides multimedia communication services over a variety of networks. It is actually an umbrella of standards that define all aspects of synchronized voice, video, and data transmission. It also defines end-to-end call signaling.
 
-* __MGCP__: MGCP is a method for PSTN gateway control or thin device control. Specified in RFC 2705, MGCP defines a protocol that controls VoIP gateways that are connected to external call control devices, referred to as call agents. MGCP provides the signaling capability for less expensive edge devices, such as gateways, that may not have a full voice-signaling protocol such as H.323 implemented. For example, any time an event such as off hook occurs at the voice port of a gateway, the voice port reports that event to the call agent. The call agent then signals that device to provide a service, such as dial-tone signaling.
+* __MGCP__: <br> 
+MGCP is a method for PSTN gateway control or thin device control. MGCP defines a protocol that controls VoIP gateways that are connected to external call control devices, referred to as call agents. MGCP provides the signaling capability for less expensive edge devices, such as gateways, that may not have a full voice-signaling protocol such as H.323 implemented. <br><br>
+For example, any time an event such as off hook occurs at the voice port of a gateway, the voice port reports that event to the call agent. The call agent then signals that device to provide a service, such as dial-tone signaling.
 
-* __SIP__: SIP is a detailed protocol that specifies the commands and responses to set up and tear down calls. SIP also details features such as security, proxy, and transport control protocol (TCP or User Datagram Protocol [UDP]) services. SIP and its partner protocols, Session Announcement Protocol (SAP) and Session Description Protocol (SDP), provide announcements and information about multicast sessions to users on a network. SIP defines end-to-end call signaling between devices. SIP is a text-based protocol that borrows many elements of HTTP, using the same transaction request and response model and similar header and response codes. It also adopts a modified form of the URL addressing scheme that is used within e-mail that is based on Simple Mail Transfer Protocol (SMTP).
+* __SIP__: <br> 
+SIP is a detailed protocol that specifies the commands and responses to set up and tear down calls. SIP also details features such as security, proxy, and transport control protocol (TCP or User Datagram Protocol [UDP]) services. SIP and its partner protocols, Session Announcement Protocol (SAP) and Session Description Protocol (SDP), provide announcements and information about multicast sessions to users on a network. SIP defines end-to-end call signaling between devices. SIP is a text-based protocol that borrows many elements of HTTP, using the same transaction request and response model and similar header and response codes. It also adopts a modified form of the URL addressing scheme that is used within e-mail that is based on Simple Mail Transfer Protocol (SMTP).
 
+This protocol is used between the Call Manager and the phone device
  
-* __SCCP__: SCCP is a Cisco proprietary protocol used between Cisco Unified Communications Manager and Cisco VoIP phones. The end stations (telephones) that use SCCP are called Skinny clients, which consume less processing overhead. The client communicates with the Cisco Unified Communications Manager using connection-oriented (TCP/IP-based) communication to establish a call with another H.323-compliant end station.
+* __SCCP__: 
+<br> SCCP is a Cisco proprietary protocol used between Cisco Unified Communications Manager and Cisco VoIP phones. The end stations (telephones) that use SCCP are called Skinny clients, which consume less processing overhead. The client communicates with the Cisco Unified Communications Manager using connection-oriented (TCP/IP-based) communication to establish a call with another H.323-compliant end station.
 
+This protocol is used between the Call Manager and the phone device
+
+>Phone devices can use sccp or sip when communicating with the CM, some can do both
+
+# H.323
+
+Today, H.323 is the most widely deployed standards-based voice and videoconferencing standard for packet-switched networks.
+
+H.323 suite:
+* Approved in 1996 by the ITU-T.
+* Peer-to-peer protocol where end devices initiate sessions.
+* Widely used with gateways, gatekeepers, or third-party H.323 clients, especially video terminals in Cisco Unified Communications.
+* H.323 gateways are never registered with Cisco Unified Communications Manager; only the IP address is available to confirm that communication is possible.
+
+The protocols specified by H.323 include the following:
+* __H.225 call signaling__: H.225 call signaling is used to establish a connection between two H.323 endpoints. This connection is achieved by exchanging H.225 protocol messages on the call-signaling channel. The call-signaling channel is opened between two H.323 endpoints or between an endpoint and the gatekeeper. <br>
+* __H.225 Registration, Admission, and Status__: Registration, Admission, and Status (RAS) is the protocol between endpoints (terminals and gateways) and gatekeepers. The RAS is used to perform registration, admission control, bandwidth changes, and status and disengage procedures between endpoints and gatekeepers. A RAS channel is used to exchange RAS messages. This signaling channel is opened between an endpoint and a gatekeeper prior to the establishment of any other channels.<br>
+* __H.245 control signaling__: <br>
+H.245 control signaling is used to exchange end-to-end control messages governing the operation of the H.323 endpoint. These control messages carry information related to the following:
+	* Capabilities exchange
+	* Opening and closing of logical channels used to carry media streams
+	* Flow-control messages
+	* General commands and indications
+
+* __Audio codecs__:<br> An audio codec encodes the audio signal from the microphone for transmission on the transmitting H.323 terminal and decodes the received audio code that is sent to the speaker on the receiving H.323 terminal. Because audio is the minimum service provided by the H.323 standard, all H.323 terminals must have at least one audio codec support, as specified in the ITU-T G.711 recommendation (audio coding at 64 kb/s). Additional audio codec recommendations such as G.722 (64, 56, and 48 kb/s), G.723.1 (5.3 and 6.3 kb/s), G.728 (16 kb/s), and G.729 (8 kb/s) may also be supported.
+
+* __Video codecs__:<br> A video codec encodes video from the camera for transmission on the transmitting H.323 terminal and decodes the received video code that is sent to the video display on the receiving H.323 terminal. Because H.323 specifies support of video as optional, the support of video codecs is optional as well. However, any H.323 terminal providing video communications must support video encoding and decoding as specified in the ITU-T H.261 recommendation.
+In IP communications environments, H.323 is widely used with gateways, gatekeepers, and third-party H.323 clients, especially video terminals. Connections are configured between devices using static destination IP addresses.
+Note Because H.323 is a peer-to-peer protocol, H.323 gateways are not registered with Cisco Unified Communications Manager as an endpoint. An IP address is configured in the Cisco Unified Communications Manager to confirm that communication is possible.
 
 
