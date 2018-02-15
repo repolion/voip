@@ -158,6 +158,10 @@ The videoconference station provides access for end-user participation in videoc
 
 Other components, such as software voice applications, interactive voice response (IVR) systems, and softphones, provide additional services to meet the needs of an enterprise site.
 
+# VoIP Functions
+
+![Components](/images/components2.png)
+
 
 
 
