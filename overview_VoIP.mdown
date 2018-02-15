@@ -168,12 +168,12 @@ In the traditional PSTN telephony network, all of the elements that are required
 ### Required VoIP functionality includes these functions:
 
 * __Signaling__: <br>
-Signaling is the ability to generate and exchange the control information that will be used to establish, monitor, and release connections between two endpoints. 
-Voice signaling requires the ability to provide supervisory, address, and alerting functionality between nodes. The PSTN network uses Signaling System 7 (SS7) to transport control messages. 
-__VoIP presents several options for signaling, including H.323, session initiation protocol (SIP), H.248, Media Gateway Control Protocol (MGCP), and Skinny Call Control Protocol (SCCP)__. 
-Signaling protocols are classified either as peer-to-peer or client/server architectures. 
-SIP and H.323 are examples of peer-to-peer signaling protocols in which the end devices or gateways contain the intelligence to initiate and terminate calls and interpret call control messages.
-H.248, SCCP, and MGCP are examples of client/server protocols in which the endpoints or gateways do not contain call control intelligence but send or receive event notifications to the server commonly referred to as the call agent. 
+Signaling is the ability to generate and exchange the control information that will be used to establish, monitor, and release connections between two endpoints. <br>
+Voice signaling requires the ability to provide supervisory, address, and alerting functionality between nodes. The PSTN network uses Signaling System 7 (SS7) to transport control messages. <br>
+__VoIP presents several options for signaling, including H.323, session initiation protocol (SIP), H.248, Media Gateway Control Protocol (MGCP), and Skinny Call Control Protocol (SCCP)__. <br>
+Signaling protocols are classified either as peer-to-peer or client/server architectures. <br>
+SIP and H.323 are examples of peer-to-peer signaling protocols in which the end devices or gateways contain the intelligence to initiate and terminate calls and interpret call control messages. <br>
+H.248, SCCP, and MGCP are examples of client/server protocols in which the endpoints or gateways do not contain call control intelligence but send or receive event notifications to the server commonly referred to as the call agent. <br>
 For example, when an MGCP gateway detects that a telephone has gone off hook, it does not know to automatically provide a dial tone. The gateway sends an event notification to the call agent,telling the agent that an off-hook condition has been detected. The call agent notifies the gateway to provide a dial tone.
 
 * __Database services__: <br>
