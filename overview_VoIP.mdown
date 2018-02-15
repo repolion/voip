@@ -217,13 +217,13 @@ This protocol is used between the Call Manager and the phone device
 
 Today, H.323 is the most widely deployed standards-based voice and videoconferencing standard for packet-switched networks.
 
-H.323 suite:
+### H.323 suite:
 * Approved in 1996 by the ITU-T.
 * Peer-to-peer protocol where end devices initiate sessions.
 * Widely used with gateways, gatekeepers, or third-party H.323 clients, especially video terminals in Cisco Unified Communications.
 * H.323 gateways are never registered with Cisco Unified Communications Manager; only the IP address is available to confirm that communication is possible.
 
-The protocols specified by H.323 include the following:
+###The protocols specified by H.323 include the following:
 * __H.225 call signaling__: H.225 call signaling is used to establish a connection between two H.323 endpoints. This connection is achieved by exchanging H.225 protocol messages on the call-signaling channel. The call-signaling channel is opened between two H.323 endpoints or between an endpoint and the gatekeeper. <br>
 * __H.225 Registration, Admission, and Status__: Registration, Admission, and Status (RAS) is the protocol between endpoints (terminals and gateways) and gatekeepers. The RAS is used to perform registration, admission control, bandwidth changes, and status and disengage procedures between endpoints and gatekeepers. A RAS channel is used to exchange RAS messages. This signaling channel is opened between an endpoint and a gatekeeper prior to the establishment of any other channels.<br>
 * __H.245 control signaling__: <br>
