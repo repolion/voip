@@ -1,6 +1,6 @@
 #Push VoIP Project
 
-echo "Write a commit message =>"
+echo "Add a comment to the commit =>"
 read message
 git add .
 git commit -m "$message"
