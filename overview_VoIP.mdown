@@ -136,19 +136,13 @@ Note:
 >__LCR (Least-cost-routing)__ It is the process of selecting the path of outbound communications traffic based on cost.
 >__TOD (time-of-day routing)__ Time of Day routing is a VoIP service that allows for flexibility in an organizations’ working. It permits the routing of incoming phone calls to different phone numbers or to voicemail depending on the time of the day or the day of the week.
 
-
-Virtualization is the creation of a virtual  version of something, such as an operating system, a server, a storage device or network resources.
-
-Operating system virtualization is the use of software to allow a piece of hardware to run multiple operating system images at the same time.
-
-
 # Components of a VoIP Network
 
 ![Components](/images/components.png)
 
 The figure depicts the basic components of a packet voice network:
 
-*__IP phones__: <br>
+* __IP phones__: <br>
 IP phones provide an IP endpoint for voice communication.
 * __Gatekeeper__: <br>
 The gatekeeper provides Call Admission Control (CAC), bandwidth control and management, and address translation.
@@ -174,7 +168,18 @@ In the traditional PSTN telephony network, all of the elements that are required
 ### Required VoIP functionality includes these functions:
 
 * __Signaling__: <br>
-Signaling is the ability to generate and exchange the control information that will be used to establish, monitor, and release connections between two endpoints. Voice signaling requires the ability to provide supervisory, address, and alerting functionality between nodes. The PSTN network uses Signaling System 7 (SS7) to transport control messages. SS7 uses out-of-band signaling, which, in this case, is the exchange of call control information in a separate dedicated channel. VoIP presents several options for signaling, including H.323, session initiation protocol (SIP), H.248, Media Gateway Control Protocol (MGCP), and Skinny Call Control Protocol (SCCP). Some VoIP gateways are also capable of initiating SS7 signaling directly to the PSTN network. Signaling protocols are classified either as peer-to-peer or client/server architectures. SIP and H.323 are examples of peer-to-peer signaling protocols in which the end devices or gateways contain the intelligence to initiate and terminate calls and interpret call control messages. H.248, SCCP, and MGCP are examples of client/server protocols in which the endpoints or gateways do not contain call control intelligence but send or receive event notifications to the server commonly referred to as the call agent. For example, when an MGCP gateway detects that a telephone has gone off hook, it does not know to automatically provide a dial tone. The gateway sends an event notification to the call agent,telling the agent that an off-hook condition has been detected. The call agent notifies the gateway to provide a dial tone.
+Signaling is the ability to generate and exchange the control information that will be used to establish, monitor, and release connections between two endpoints. 
+
+Voice signaling requires the ability to provide supervisory, address, and alerting functionality between nodes. The PSTN network uses Signaling System 7 (SS7) to transport control messages. 
+__VoIP presents several options for signaling, including H.323, session initiation protocol (SIP), H.248, Media Gateway Control Protocol (MGCP), and Skinny Call Control Protocol (SCCP)__. 
+
+Signaling protocols are classified either as peer-to-peer or client/server architectures. 
+
+SIP and H.323 are examples of peer-to-peer signaling protocols in which the end devices or gateways contain the intelligence to initiate and terminate calls and interpret call control messages.
+
+H.248, SCCP, and MGCP are examples of client/server protocols in which the endpoints or gateways do not contain call control intelligence but send or receive event notifications to the server commonly referred to as the call agent. 
+
+For example, when an MGCP gateway detects that a telephone has gone off hook, it does not know to automatically provide a dial tone. The gateway sends an event notification to the call agent,telling the agent that an off-hook condition has been detected. The call agent notifies the gateway to provide a dial tone.
 
 
 
