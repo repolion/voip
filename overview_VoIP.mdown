@@ -189,5 +189,14 @@ Codecs provide the coding and decoding translation between analog and digital fa
 ![Signaling protocols](/images/signalingProtocols.png)
 
 
+* __H.323__: H.323 is a standard that specifies the components, protocols, and procedures that provide multimedia communication services—real-time audio, video, and data communications—over packet networks, including IP networks. H.323 is part of a family of ITU-T recommendations called H.32x that provides multimedia communication services over a variety of networks. It is actually an umbrella of standards that define all aspects of synchronized voice, video, and data transmission. It also defines end-to-end call signaling.
+
+* __MGCP__: MGCP is a method for PSTN gateway control or thin device control. Specified in RFC 2705, MGCP defines a protocol that controls VoIP gateways that are connected to external call control devices, referred to as call agents. MGCP provides the signaling capability for less expensive edge devices, such as gateways, that may not have a full voice-signaling protocol such as H.323 implemented. For example, any time an event such as off hook occurs at the voice port of a gateway, the voice port reports that event to the call agent. The call agent then signals that device to provide a service, such as dial-tone signaling.
+
+* __SIP__: SIP is a detailed protocol that specifies the commands and responses to set up and tear down calls. SIP also details features such as security, proxy, and transport control protocol (TCP or User Datagram Protocol [UDP]) services. SIP and its partner protocols, Session Announcement Protocol (SAP) and Session Description Protocol (SDP), provide announcements and information about multicast sessions to users on a network. SIP defines end-to-end call signaling between devices. SIP is a text-based protocol that borrows many elements of HTTP, using the same transaction request and response model and similar header and response codes. It also adopts a modified form of the URL addressing scheme that is used within e-mail that is based on Simple Mail Transfer Protocol (SMTP).
+
+ 
+* __SCCP__: SCCP is a Cisco proprietary protocol used between Cisco Unified Communications Manager and Cisco VoIP phones. The end stations (telephones) that use SCCP are called Skinny clients, which consume less processing overhead. The client communicates with the Cisco Unified Communications Manager using connection-oriented (TCP/IP-based) communication to establish a call with another H.323-compliant end station.
+
 
 
