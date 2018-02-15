@@ -48,7 +48,7 @@ An Internet Engineering Task Force (IETF) draft standard for controlling voice g
 IP networks.
 Media Gateway Control Protocol (MGCP) is a plain-text protocol used by call-control devices to manage IP Telephony gateways.
 
-MGCP is a master/slave protocol that allows a call control device (such as Cisco CallManager) to take control of a specific port on a gateway. 
+MGCP is a master/slave __protocol that allows a call control device (such as Cisco CallManager) to take control of a specific port on a gateway__. 
 This has the advantage of centralized gateway administration and provides for largely scalable IP Telephony solutions. With this protocol, the __Cisco CallManager__ knows and controls the state of each individual port on the gateway. It allows complete control of the dial plan from Cisco CallManager, and gives CallManager per-port control of connections to the __public switched telephone network (PSTN)__, legacy __PBX__, voice mail systems, __plain old telephone service (POTS)__ phones, and so forth. 
 
 Another concept relevant to the MGCP implementation with Cisco CallManager is PRI Backhaul...
