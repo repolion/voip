@@ -233,10 +233,12 @@ H.245 control signaling is used to exchange end-to-end control messages governin
 	* Flow-control messages
 	* General commands and indications
 
-* __Audio codecs__:<br> An audio codec encodes the audio signal from the microphone for transmission on the transmitting H.323 terminal and decodes the received audio code that is sent to the speaker on the receiving H.323 terminal. Because audio is the minimum service provided by the H.323 standard, all H.323 terminals must have at least one audio codec support, as specified in the ITU-T G.711 recommendation (audio coding at 64 kb/s). Additional audio codec recommendations such as G.722 (64, 56, and 48 kb/s), G.723.1 (5.3 and 6.3 kb/s), G.728 (16 kb/s), and G.729 (8 kb/s) may also be supported.
+		* __Audio codecs__:<br> An audio codec encodes the audio signal from the microphone for transmission on the transmitting H.323 terminal and decodes the received audio code that is sent to the speaker on the receiving H.323 terminal. Because audio is the minimum service provided by the H.323 standard, all H.323 terminals must have at least one audio codec support, as specified in the ITU-T G.711 recommendation (audio coding at 64 kb/s). Additional audio codec recommendations such as G.722 (64, 56, and 48 kb/s), G.723.1 (5.3 and 6.3 kb/s), G.728 (16 kb/s), and G.729 (8 kb/s) may also be supported.
 
-* __Video codecs__:<br> A video codec encodes video from the camera for transmission on the transmitting H.323 terminal and decodes the received video code that is sent to the video display on the receiving H.323 terminal. Because H.323 specifies support of video as optional, the support of video codecs is optional as well. However, any H.323 terminal providing video communications must support video encoding and decoding as specified in the ITU-T H.261 recommendation.
-In IP communications environments, H.323 is widely used with gateways, gatekeepers, and third-party H.323 clients, especially video terminals. Connections are configured between devices using static destination IP addresses.
+		* __Video codecs__:<br> A video codec encodes video from the camera for transmission on the transmitting H.323 terminal and decodes the received video code that is sent to the video display on the receiving H.323 terminal. Because H.323 specifies support of video as optional, the support of video codecs is optional as well. However, any H.323 terminal providing video communications must support video encoding and decoding as specified in the ITU-T H.261 recommendation.
+
+>In IP communications environments, H.323 is widely used with gateways, gatekeepers, and third-party H.323 clients, especially video terminals. Connections are configured between devices using static destination IP addresses.
 Note Because H.323 is a peer-to-peer protocol, H.323 gateways are not registered with Cisco Unified Communications Manager as an endpoint. An IP address is configured in the Cisco Unified Communications Manager to confirm that communication is possible.
 
+---------
 
