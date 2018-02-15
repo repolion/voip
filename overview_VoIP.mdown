@@ -61,11 +61,18 @@ The Cisco SIP implementation enables supported Cisco platforms to signal the set
 
 Like other VoIP protocols, SIP is designed to address the functions of signaling and session management within a packet telephony network. Signaling allows call information to be carried across network boundaries. Session management provides the ability to control the attributes of an end-to-end call.
 
-#### PSTN (public switched telephone network) ...
+#### PSTN (public switched telephone network)
 
-#### DSPs (digital signal processors) ...
+The __Public Switched Telephone Network__, also known as __Plain Old Telephone Service (POTS)__, is the wired phone system over which landline telephone calls are made. The PSTN relies on circuit switching. To connect one phone to another, the phone call is routed through numerous switches operating on a local, regional, national or international level. The connection established between the two phones is called a circuit.
+<br><br>
+In the early days, phone calls traveled as analog signals across copper wire. Every phone call needed its own dedicated copper wire connecting the two phones. That's why you needed operators' assistance in making calls.
 
-#### DTMF (Dual-tone multi-frequency) ...
+#### DSPs (digital signal processing) 
+Digital signal processing (DSP) refers to various techniques for improving the accuracy and reliability of digital communications.
+Basically, DSP works by clarifying, or standardizing, the levels or states of a digital signal. ADSP circuit is able to differentiate between human-made signals,which are orderly, and noise, which is inherently chaotic.
+
+#### DTMF (Dual-tone multi-frequency)
+In modern communication systems you are likely not using DTMF. As we move to SIP and other forms of digital communication we are not actually transmitting tones at all. Both when dialing a phone number and when providing touch-tone responses to an IVR you may hear the tone but that is actually your phone playing the tone locally for your benefit. Behind the scenes a DTMF value is sent digitally without any tone being transmitted at all. Depending on the connection between you and the remote system there may never be a tone generated at all.
 
 # Cisco Unified Communications architecture
 
@@ -141,19 +148,19 @@ Operating system virtualization is the use of software to allow a piece of hardw
 
 The figure depicts the basic components of a packet voice network:
 
-*__IP phones__: 
+*__IP phones__: <br>
 IP phones provide an IP endpoint for voice communication.
-* __Gatekeeper__: 
+* __Gatekeeper__: <br>
 The gatekeeper provides Call Admission Control (CAC), bandwidth control and management, and address translation.
-* __Gateway__: 
+* __Gateway__: <br>
 The gateway provides translation between VoIP and non-VoIP networks such as the PSTN. Gateways also provide physical access for local analog and digital voice devices such as telephones, fax machines, key sets, and PBXs.
-* __Multipoint control unit__: 
+* __Multipoint control unit__: <br>
 The multipoint control unit provides real-time connectivity for participants in multiple locations to attend the same videoconference or meeting.
-* __Call agent__: 
+* __Call agent__: <br>
 The call agent provides call control for IP phones, CAC, bandwidth control and management, and address translation.
-* __Application servers__:
+* __Application servers__: <br>
 Application servers provide services such as voice mail, unified messaging, and Cisco Unified Communications Manager Attendant Console.
-* __Videoconference station__: 
+* __Videoconference station__: <br>
 The videoconference station provides access for end-user participation in videoconferencing. The videoconference station contains a video capture device for video input and a microphone for audio input. The user can view video streams and hear the audio that originates at a remote user station.
 
 Other components, such as software voice applications, interactive voice response (IVR) systems, and softphones, provide additional services to meet the needs of an enterprise site.
@@ -162,6 +169,12 @@ Other components, such as software voice applications, interactive voice respons
 
 ![Components](/images/components2.png)
 
+In the traditional PSTN telephony network, all of the elements that are required to complete the call are transparent to the end user. Migration to VoIP requires an awareness of these required elements and a thorough understanding of the protocols and components that provide the same functionality in an IP network.
+
+### Required VoIP functionality includes these functions:
+
+* __Signaling__: <br>
+Signaling is the ability to generate and exchange the control information that will be used to establish, monitor, and release connections between two endpoints. Voice signaling requires the ability to provide supervisory, address, and alerting functionality between nodes. The PSTN network uses Signaling System 7 (SS7) to transport control messages. SS7 uses out-of-band signaling, which, in this case, is the exchange of call control information in a separate dedicated channel. VoIP presents several options for signaling, including H.323, session initiation protocol (SIP), H.248, Media Gateway Control Protocol (MGCP), and Skinny Call Control Protocol (SCCP). Some VoIP gateways are also capable of initiating SS7 signaling directly to the PSTN network. Signaling protocols are classified either as peer-to-peer or client/server architectures. SIP and H.323 are examples of peer-to-peer signaling protocols in which the end devices or gateways contain the intelligence to initiate and terminate calls and interpret call control messages. H.248, SCCP, and MGCP are examples of client/server protocols in which the endpoints or gateways do not contain call control intelligence but send or receive event notifications to the server commonly referred to as the call agent. For example, when an MGCP gateway detects that a telephone has gone off hook, it does not know to automatically provide a dial tone. The gateway sends an event notification to the call agent,telling the agent that an off-hook condition has been detected. The call agent notifies the gateway to provide a dial tone.
 
 
 
