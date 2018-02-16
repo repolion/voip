@@ -8,3 +8,17 @@ Version 2010
 
 
 # Introducing the Cisco Unified Communications Manager Lineup
+
+In Cisco’s Unified Communications architecture, Unified Communications Managers are what makes IP telephony possible. These hardware/software devices are the brains that handle IP call processing. The call-processing portion of a Unified Communications system handles the sequence of operations from the time a user picks up a phone to make a call
+to the time the user ends the call by hanging up. <br>
+     
+#### There are three distinct Unified Communications Manager systems: 
+* __Cisco Unified Communications Manager (CUCM)__
+* __Cisco Unified Communications Manager Business Edition (CUCMBE)__ 
+* __Cisco Unified Communications Manager Express (CUCM Express)__
+
+## Cisco Unified Communications Manager - CUCM
+
+The Unified Communications Manager is Cisco’s IP telephony flagship system.
+Each server appliance is capable of handling up to thoussands endpoints and can be clustered to support much more endpoints. 
+Scalability is the name of the game here. When clustering multiple CUCM servers together, __one CUCM Publisher__ controls the read/write functions of the database. All other servers are called __subscriber servers__. Subscriber servers handle additional call processing or sit idle as standby servers in case an active subscriber were to fail.
