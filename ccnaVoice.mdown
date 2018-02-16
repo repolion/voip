@@ -12,12 +12,12 @@ Version 2010
 In Cisco’s Unified Communications architecture, Unified Communications Managers are what makes IP telephony possible. These hardware/software devices are the brains that handle IP call processing. The call-processing portion of a Unified Communications system handles the sequence of operations from the time a user picks up a phone to make a call
 to the time the user ends the call by hanging up. <br>
      
-#### There are three distinct Unified Communications Manager systems: 
+### There are three distinct Unified Communications Manager systems: 
 * __Cisco Unified Communications Manager (CUCM)__
 * __Cisco Unified Communications Manager Business Edition (CUCMBE)__ 
 * __Cisco Unified Communications Manager Express (CUCM Express)__
 
-## Cisco Unified Communications Manager - CUCM
+### Cisco Unified Communications Manager - CUCM
 
 The Unified Communications Manager is Cisco’s IP telephony flagship system.
 Each server appliance is capable of handling up to thoussands endpoints and can be clustered to support much more endpoints. 
@@ -26,14 +26,23 @@ __It is important to keep in mind that the CUCM appliance offers only call-proce
 All __voice mail functionality__ must be handled by a separate hardware/software solution because call-processing tasks require dedicated hardware to be able to handle the large call volumes that CUCM was intended for <br>
 Likewise, a large voice mail solution should also have its own dedicated hardware to handle the high number of users and the degree of functionality that is required in such large organizations.
 
-## Cisco Unified Communications Manager Business Edition
+### Cisco Unified Communications Manager Business Edition
 
 The business edition of the full-blown CUCM is geared toward medium-size companies that require up to 500 endpoints. 
 __This olution more scalable than CUCM Express but more expensive too.__
 
-## Cisco Unified Communications Manager Express (less than 400 Users)
+### Cisco Unified Communications Manager Express (less than 400 Users)
 
 This is a software runs on Cisco routers such as the Integrated Service Router (ISR) line. Integrated Service Router is a term Cisco uses for routers that integrate multiple services into a single chassis. For example, an ISR can integrate full routing, switching, wireless, firewalling, and voice capabilities on a single unit.<br>
 A special version of Internetwork Operating System (IOS) software must be licensed for the router to run CUCM Express. The IOS is the software used by Cisco routers and switches that performs routing, switching and telecommunications functionalities. The Communications Manager Express software must also be installed in the router’s flash memory.<br>
 No separate servers or hardware are needed to handle the communications of a business up to 400 users.
 __CUCM Express does not manage more than 400 users. It can, however, be connected to a Cisco Unified Communications Manager to set up a network between a headquarters and a branch.__
+
+# Introducing the Cisco Unity Lineup
+
+In the Cisco world, the voice mail product is called Unity.<br>
+The Unity voice mail solutions can be broken down into three main categories:
+     
+* __Cisco Unity__
+* __Cisco Unity Connection__ 
+* __Cisco Unity Express__
