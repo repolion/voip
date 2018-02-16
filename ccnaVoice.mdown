@@ -108,9 +108,39 @@ Voice analog and digital interfaces are special PSTN connections configured on v
 
 #### Virtual way to connect the hateway to the PSTN
 
-A virtual method of connecting your voice gateway to the PSTN is to set up a VoIP trunk to an Internet Telephony Service Provider (ITSP). This VoIP trunk essentially creates a virtual tunnel from your local voice gateway to a service provider using your Internet connection. The calls are then switched out onto the PSTN at the ITSP site. <br>
+A virtual method of connecting your voice gateway to the PSTN is to set up a VoIP trunk to an __Internet Telephony Service Provider (ITSP)__. This VoIP trunk essentially creates a virtual tunnel from your local voice gateway to a service provider using your Internet connection. The calls are then switched out onto the PSTN at the ITSP site. <br>
 Next Figure shows how a voice gateway can be configured to connect virtually to the PSTN by tunneling voice traffic to an ITSP.
 ![Gateway virtual connection to PSTN via ITSP](/images/gatewayVirtual.png)
 
+# Choosing an IP Telephony Deployment Option
+There are four Cisco-supported deployment options that we can use to design an IP telephony solution. Each option has advantages and disadvantages. Most deployments will fall nicely within one of the options depending on the end-user requirements.<br>
+The four supported deployment options are as follows:
+* __Single site with centralized call processing__
+* __Multisite with centralized call processing__
+* __Clustering over the wide area network__
+* __Multisite with distributed call processing__
 
+## Single Site with Centralized Call Processing
+The single-site deployment is a bit of a no-brainer. If all of your users are in the same geographic region and are interconnected with a high-speed network, then a centralized- call processing solution is the way to go. High availability can be achieved by clustering multiple Communications Managers on the same local network. Voice gateway redundancy can also be achieved by adding two or more voice gateway routers. The key factor to keep in mind is that even though the system needs multiple CUCM systems for redundancy,
+all users ultimately connect to a single system for their unified communication needs. Figure 1.5 shows a single-site design.
+![Single site deployement](/images/singleSite.png)
 
+# Multisite with Centralized Call Processing
+The design options become more interesting when you need to provide unified communications to multiple sites that are interconnected across a wide area network (WAN). One option is to offer VoIP services to remote sites that communicate across the WAN to a CUCM system located at a central site. Figure 1.6 depicts a typical multisite design.
+![Multisite centralized](/images/multisiteCentralized.png)
+Phones located at Remote Site A and Remote Site B will communicate back to a single call-processing cluster located at the primary site. This solution is best when the vast majority of your users are located at a single site and you have a few remote sites. A reliable and high-speed WAN connection is obviously beneficial because all voice traffic will need to traverse the WAN to reach the primary site, where the call-processing, voice mail, and other Unified Communications applications are located.
+If your remote sites have a single WAN connection, this creates a single point of failure. This may or may not be a concern to you. If it is critical that the remote sites maintain
+the ability to have at least basic PSTN calling capabilities during a WAN outage, you can implement the survivable remote site telephony service (SRST) to a voice-capable router at each remote site. SRST is a cost-effective method to provide high-availability voice features
+to remote sites that have a centralized call-processing design. Along with installing and configuring SRST on the router, you will need to purchase one or more local PSTN services
+to be used as a backup. When a WAN outage occurs, the remote site phones can no longer communicate with the call processor. An SRST-configured router will detect the WAN failure and begin routing calls out of the backup PSTN connections that are locally available. If you get the opportunity to configure a router for SRST redundancy, you’ll be happy to find out that the configuration is very similar to a standard voice router with the CUCM Express software.
+
+## Clustering over the Wide Area Network
+If your organization has two to six large and geographically dispersed locations that are interconnected by a high-speed and reliable WAN link, the clustering option may be the right choice for you. Basically, you provision a CUCM publisher server at one location and up to five subscriber servers at the remote site locations. The publisher and subscriber servers talk to one another and work as a single unit. This enables administrators to maintain a single system, but you must take care to ensure that the WAN is very stable and free of latency. On-network calls are made across the WAN, while off-network calls are made over the local PSTN connections. If the WAN were to fail, users would continue to connect to their local CUCM server, but all calls placed would go over the PSTN. Figure 1.7 shows a typical WAN clustering deployment model.
+![Clustering over the WAN](/images/clusteringOverNetwork.png)
+Because there is a limit to the number of active subscriber servers in a single CUCM deployment, this solution does not scale beyond six total sites. Because the clustered CUCM servers need to stay constantly updated and synchronized, the WAN links must provide quick response times for updates and keepalives.
+
+# Multisite with Distributed Call Processing
+The distributed call-processing deployment is the best choice when you have many users who are geographically dispersed in multiple locations. The remote sites may also have low-speed WAN connections that are not highly reliable. If WAN conditions are not ideal for voice, then it might be best to distribute the call-processing and voice mail functionality out to the remote site itself. Figure 1.8 shows a typical multisite distributed call-processing deployment.
+![Multisite distributed](/images/multisiteDistributed.png)
+As you can see in the figure, each remote site has a Communications Manager and voice gateway to locally serve the remote-site phones, and each is completely independent of every other. The design can be configured for VoIP traffic to traverse WAN links to reach other internal destinations if possible. If the WAN is too congested, internal calls will be made over the PSTN.
+Clearly this deployment offers the utmost in reliability but it comes at a high cost. Not only will the additional purchase of call-processing and voice mail services at each site be required, but you also need to keep in mind that support costs go up because you have to support multiple Unified Communications systems as opposed to one centralized system.
