@@ -125,7 +125,7 @@ The single-site deployment is a bit of a no-brainer. If all of your users are in
 
 ![Single site deployement](/images/singleSite.png)
 
-# Multisite with Centralized Call Processing
+# Multisite with Centralized Call Processing (what Fedex had has architecture before the current one)
 The design options become more interesting when you need to provide unified communications to multiple sites that are interconnected across a wide area network (WAN). One option is to offer VoIP services to remote sites that communicate across the WAN to a CUCM system located at a central site.
 
 ![Multisite centralized](/images/multisiteCentralized.png)
@@ -146,5 +146,21 @@ The distributed call-processing deployment is the best choice when you have many
 
 As you can see in the figure, each remote site has a Communications Manager and voice gateway to locally serve the remote-site phones, and each is completely independent of every other. The design can be configured for VoIP traffic to traverse WAN links to reach other internal destinations if possible. If the WAN is too congested, internal calls will be made over the PSTN.
 Clearly this deployment offers the utmost in reliability but it comes at a high cost.
+
+-----
+
+# Understanding the Unified Communications Model
+
+The next figure displays the four layers and the core components within each layer.
+
+![Unified Communication Model](/images/ucModel.png)
+
+### The infrastructure layer
+
+### The Call Control layer
+
+### The Applications layer
+
+### The Endpoints
 
 
