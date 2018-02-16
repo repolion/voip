@@ -207,13 +207,25 @@ The two primary voice gateway functions:
 * __digital transcoding__ 
 
 ## Analog-to-Digital Conversion
-Because DSPs are responsible for analog-to-digital conversion, they are required on voice gateways. Depending on the Cisco hardware used for a voice gateway, DSP modules can be found either attached to a network module (NM), WIC, or VWIC card or plugged directly into the motherboard of the router. It is important to note that a DSP resource is required for every legacy PSTN-circuit-to-IP-packet conversion that takes place on the voice gateway.
-Your voice gateway router is also likely to include one or many different types of digital or analog voice interfaces, such as FXO, ISDN BRI, or T1 PRI circuit. The voice gateway sits between the legacy PSTN network and the VoIP network. The voice signals between the two networks do not speak the same language in terms of signaling, coding, and control. DSP resources are used to translate this information from one format to the other and thereby bridge the two networks.
+Because DSPs are responsible for analog-to-digital conversion, they are required on voice gateways. Depending on the Cisco hardware used for a voice gateway, DSP modules can be found either attached to a network module (NM), WIC, or VWIC card or plugged directly into the motherboard of the router. <mark>It is important to note that a DSP resource is required for every legacy PSTN-circuit-to-IP-packet conversion that takes place on the voice gateway</mark>.
+<mark>Your voice gateway router is also likely to include one or many different types of digital or analog voice interfaces, such as __FXO__, __ISDN BRI__, or __T1 PRI circuit__</mark>. The voice gateway sits between the legacy PSTN network and the VoIP network. The voice signals between the two networks do not speak the same language in terms of signaling, coding, and control. DSP resources are used to translate this information from one format to the other and thereby bridge the two networks.
+
+<mark>BRI and PRI are different types of digital or analog voice interfaces</mark>
+<mark>B-Channel is for transmitting the content</mark><br>
+<mark>D-Channel is for signaling and other communications</mark><br>
+Actually, PRI and BRI are not that different at all.The only difference is the number of channels that they use.
+BRI : 2 B-Channels(1 up and 1 down) and 1 D-Channel 
+PRI : (IN USA) 23 B-Channels + A D-Channel
+Elsewhere, 46 B-Channels and 2 D-Channels
+
+1 ISDN PRI is the main level service while the ISDN BRI is an entry level service
+2 ISDN PRI uses more channels than ISDN BRI
+3 ISDN PRI is faster than ISDN BRI
+
+
+<mark>ISDN (Integrated Services Digital Network) </mark>is a very old set of standards created in 1988 for facilitating the transmission of digital data across typical telephone networks.
 
 ## Digital Transcoding
-Even when two devices speak natively on an IP network, they still may need DSP resources to communicate properly. When two VoIP devices wish to talk to one another over the
-IP network, both need to be able to understand the codec that is being used. If one VoIP end unit uses a codec that the other end unit does not understand, a DSP can be used to transcode the stream into a codec that is supported. If you require hardware transcoding in your voice network, you can connect your CUCM to a DSP farm, which is normally found on a voice gateway. Essentially, you configure SCCP signaling between the CUCM and the voice gateway, which contains DSP resources. When the CUCM receives a voice stream that requires transcoding, the stream is directed to the voice gateway using SCCP. While
-it is important to understand the purpose of DSP farms, the actual configuration of a DSP farm is outside the scope of this book.
+<mark>Even when two devices speak natively on an IP network, they still may need DSP resources to communicate properly. When two VoIP devices wish to talk to one another over the IP network, both need to be able to understand the codec that is being used. If one VoIP end unit uses a codec that the other end unit does not understand, a DSP can be used to transcode the stream into a codec that is supported.<mark> If you require hardware transcoding in your voice network, you can connect your CUCM to a DSP farm, which is normally found on a voice gateway. Essentially, you configure SCCP signaling between the CUCM and the voice gateway, which contains DSP resources. <mark>When the CUCM receives a voice stream that requires transcoding, the stream is directed to the voice gateway using SCCP.
 The types of codecs you need to transcode are a factor in how many DSP resources you need on your voice gateway. Usually, the more compressed the audio signal is,
-the more DSP resources are required for transcoding into another codec. Voice codecs are classified by complexity; they are considered to be either medium or
-high complexity.
+the more DSP resources are required for transcoding into another codec. Voice codecs are classified by complexity; </mark>
