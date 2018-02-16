@@ -151,16 +151,43 @@ Clearly this deployment offers the utmost in reliability but it comes at a high 
 
 # Understanding the Unified Communications Model
 
-The next figure displays the four layers and the core components within each layer.
+__The next figure displays the four layers and the core components within each layer.__
 
 ![Unified Communication Model](/images/ucModel.png)
 
 ### The infrastructure layer
+The Infrastructure layer of the Unified Communications Model is where you will find your routers, switches, and voice gateways. The Infrastructure layer is responsible for moving IP packets from the source to the destination.
+Because the Unified Communications Model is a converged network, multiple types of traffic are sent over the same infrastructure. Data, voice, and video traffic are all running over the same cabling and hardware in this layer. Because of the mixed traffic, there must be a way to distinguish voice and video from data and prioritize the types. Voice and video traffic are much more sensitive to delay on the network and ultimately must take priority over data. The Infrastructure layer typically incorporates quality of service (QoS) mechanisms to intelligently identify time-sensitive traffic and give it priority when there is congestion on the network.
+Security also plays a key role in the Infrastructure layer. All access-control and IP restrictions are implemented at this layer. Typically, access control lists (ACLs) are created and implemented to limit the type of TCP/UDP traffic and source IP addresses that can access the Call Control layer, which is where the CUCM resides.
 
 ### The Call Control layer
+Sitting on top of the Infrastructure layer is the Call Control layer. This is the heart of the Unified Communications system and is where the Call Manager is found. The CUCM is responsible for the following functions:
+* Call processing
+* Call signaling
+* Endpoint control
+* Dial plan control
+* Media resource management
+* User management
+As you can see, the upper two layers of the Unified Communications Model fully rely on the Call Control layer to provide the underlying foundation from which the Application and Endpoint layers build. The majority of a UC phone system’s intelligence is configured and maintained at this layer of the model.
 
 ### The Applications layer
+The Applications layer builds on the Call Control layer to provide value-added functionality that makes a Unified Communications system feature rich. The Cisco Unity voice mail application is part of this layer. Not only does it provide full voice mail capabilities, but it can also integrate with email systems to provide integrated or unified messaging features.
+The Cisco Emergency Responder is another application independent from the CUCM. This application is responsible for providing accurate information to emergency services in the event that an end user dials 911. While the Emergency Responder relies heavily on the Call Control layer, technically it is an independent application and sits one layer above
+the Call Control layer in the Unified Communications Model.
+A third popular Unified Communications application found in large call centers is the Unified Customer Contact Center. Again, this separate application works in conjunction with the CUCM, found in the Call Control layer. It adds additional functionality to the call center in the form of collaboration and customer resource management tools to provide a more personal service. Specifically, the Contact Center application performs the following functions:
+* Separates and delivers different customers to the proper call-handling representative based on intelligent routing decisions
+* Monitors customer representative resource availability and idle times for proper staffing needs
+* Utilizes detailed customer profiles using both dynamically and manually added customer information
+* Integrates with Cisco Presence applications such as voice, video, email, instant messaging, and web collaboration
 
 ### The Endpoints
+The Endpoints layer of the Unified Communications Model is probably the easiest to understand. This is where all voice/video communications begin and end for the user. In this layer you will find devices such as Cisco IP phones, IP Communicators, soft phones, Cisco Video Advantage devices, and Cisco ATA termination points. Essentially, any user device that utilizes the following endpoint signaling protocols is considered to be an endpoint in the Cisco Unified Communications Model:
+* Skinny Call Control Protocol (SCCP)   
+* Session Initiation Protocol (SIP)
+The users interact with these endpoints, and they require the support of the three layers below the Endpoints layer. Without the Applications layer, there would be no voice mail functions. Without the Call Control layer, there would be no intelligence to place a phone call. And without the Infrastructure layer, there would be no way to transport the traffic!
 
+# A Closer Look at Voice Gateways
+Voice gateways are a vital part of VoIP communications and are often the most misunderstood. The purpose of voice gateways is to interconnect a VoIP packet-based network with a legacy phone network. A conversion process must take place for
+the two different systems to communicate with each other properly. Voice gateways can serve two primary functions on your network. They can be used to connect a CUCM to the PSTN or to connect a CUCM with a legacy PBX. Both of these services require a hardware component on the voice gateway, called a digital signal processor (DSP). Let’s first look at how DSP resources can be used to provide connectivity to the PSTN and legacy gateways. We’ll look at both setups to see exactly how these two situations are used and the technology behind voice gateways. Then we’ll move on to discuss voice gateway dial peers and call legs. Last, we’ll
+cover the signaling protocols that facilitate the connection between the CUCM and the voice gateway.
 
