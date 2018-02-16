@@ -75,7 +75,7 @@ As with all Express products in Cisco’s lineup, Unity Express runs on the same
 
 --------
 
-# Introducing Cisco IP Phones
+#### Introducing Cisco IP Phones
 
 __IP phones include hardware- and software-based voice solutions. These IP phones allow the user to make phone calls on- and off-network just like any traditional telephone unit.__ <br>
 
@@ -86,7 +86,25 @@ Some examples of value-added functionality that Cisco IP phones possess:
 * __Fixed and programmable voice feature buttons__
 * __Integration with video services__
 
-# Cisco Analog Telephony Adapter
+#### Cisco Analog Telephony Adapter
 __The Cisco Analog Telephony Adapter (ATA)__ is a device that allows standard analog telephones and fax machines to operate on an Ethernet LAN. The ATA has one Ethernet port for network connectivity and two RJ-11 analog ports to connect up to two analog devices. This solution is good if the organization has analog telephony devices it wants to leverage throughout an IP telephony migration.
 
 ![Analog Telephony Adapter](/images/ata.png)
+
+------
+
+# Using Voice Gateways
+
+The Cisco Unified Communications call-processing devices in the CUCM suite allow engineers to configure and deploy a voice system for on-network calling. On-network dialing means that the calls are contained within a private network fully controlled
+by a private organization. But what if you need to make a call to someone outside the local organization? This is where voice gateways come into play.<br>
+__Voice gateways are responsible for the setup of off-network calling.__<br>
+
+A voice gateway is simply an IOS router that is capable of translating legacy voice communication into IP packets for transport over data networks.
+It sits right on the border between your IP network and standard telephone networks.
+__It is important to understand that voice gateways can connect your Cisco Unified Communications solution to the public switched telephone network (PSTN) either physically or virtually using a variety of methods.__
+<br>
+Voice analog and digital interfaces are special PSTN connections configured on voice gateway routers to bridge the VoIP and PSTN networks so off-network calls can successfully be completed.<br>
+![voice Gateway](/images/voiceGateway1.png)
+
+
+
