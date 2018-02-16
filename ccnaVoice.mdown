@@ -106,7 +106,7 @@ __It is important to understand that voice gateways can connect your Cisco Unifi
 Voice analog and digital interfaces are special PSTN connections configured on voice gateway routers to bridge the VoIP and PSTN networks so off-network calls can successfully be completed.<br>
 ![voice Gateway](/images/voiceGateway1.png)
 
-####Virtual way to connect the hateway to the PSTN
+#### Virtual way to connect the hateway to the PSTN
 
 A virtual method of connecting your voice gateway to the PSTN is to set up a VoIP trunk to an Internet Telephony Service Provider (ITSP). This VoIP trunk essentially creates a virtual tunnel from your local voice gateway to a service provider using your Internet connection. The calls are then switched out onto the PSTN at the ITSP site. <br>
 Next Figure shows how a voice gateway can be configured to connect virtually to the PSTN by tunneling voice traffic to an ITSP.
