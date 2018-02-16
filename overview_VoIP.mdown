@@ -80,10 +80,10 @@ Digital signal processing (DSP) refers to various techniques for improving the a
 Basically, DSP works by clarifying, or standardizing, the levels or states of a digital signal. ADSP circuit is able to differentiate between human-made signals,which are orderly, and noise, which is inherently chaotic.
 
 ## DTMF (Dual-tone multi-frequency)
-In modern communication systems you are likely not using DTMF. As we move to SIP and other forms of digital communication we are not actually transmitting tones at all. Both when dialing a phone number and when providing touch-tone responses to an IVR you may hear the tone but that is actually your phone playing the tone locally for your benefit. Behind the scenes a DTMF value is sent digitally without any tone being transmitted at all. Depending on the connection between you and the remote system there may never be a tone generated at all.
+In modern communication systems you are likely not using DTMF. As we move to SIP and other forms of digital communication we are not actually transmitting tones at all. Both when dialing a phone number and when providing touch-tone responses to an IVR you may hear the tone but that is actually your phone playing the tone locally for your benefit. Behind the scenes a DTMF value is sent digitally without any tone being transmitted at all. Depending on the connection between you and the remote system there may never be a tone generated at all.<br>
+__Dual-tone multi-frequency signaling__ (DTMF) is an in-band telecommunication signaling system using the voice-frequency band over telephone lines between telephone equipment and other communications devices and switching centers.
 
 ## Cisco Unified Communications architecture
-
 The Cisco Unified Communications system fully integrates communications by enabling data, voice, and video to be transmitted over a single network infrastructure using standards-based IP.
 The Cisco Unified Communications system provides and maintains a high level of __availability__, __quality of service (QoS)__, and __security__ for the network.
 

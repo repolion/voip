@@ -1202,4 +1202,31 @@ negotiate and end up using the G.729 codec. Why did they choose G.729? If there 
 <p>In this situation we have a Cisco phone that can understand G.729 and G.711. The third- party phone can use only the G.726 codec. In this situation, we’ll need to tap into the DSP resources to perform transcoding between the two endpoints.<br />
 Echo Cancellation<br />
 Echo is the reflection of sound that arrives to the listener a period of time after the direct sound is heard. A certain amount of echo is experienced on most voice calls and up to a certain point is tolerated. <mark>When analog signals are converted to digital signals and then compressed using codecs, echo is often amplified to the point where it severely degrades the quality of the call. DSP resources are used to assist in the elimination of echo when converting from one voice signal into another. Echo cancellation is performed by default</mark>.</p>
-<hr /></article></body></html>
+<hr />
+<h1 id="dtmf-relay-services"><a name="user-content-dtmf-relay-services" href="#dtmf-relay-services" class="headeranchor-link" aria-hidden="true"><span class="headeranchor"></span></a>DTMF-Relay Services</h1>
+<p><mark>VoIP devices do not support traditional DTMF digits by default. It may be necessary to allow your IP endpoints to use DTMF to communicate with non-VoIP-based services<mark>. DTMF-relay can be used to facilitate this conversion. There are several methods for configuring DTMF-relay. All of them require the use of DSPs to properly transport<br />
+the DTMF tone uncompressed over an IP network. </p>
+<h1 id="media-termination-points"><a name="user-content-media-termination-points" href="#media-termination-points" class="headeranchor-link" aria-hidden="true"><span class="headeranchor"></span></a>Media Termination Points</h1>
+<p>When using H.323 or SIP endpoints or gateways, you can use DSP resources to assist with the process of functions such as call holds, parks, transfers, and conferences. These voice services are all very commonly used in most CUCM implementations. These supplementary services are referred to as media termination points. The DSPs are used<br />
+to either help “park” calls while on hold or parking or provide audio multiplexing into a single audible stream for conference calls</p>
+<h1 id="using-voice-gateways-to-connect-a-cucm-to-a-pbx"><a name="user-content-using-voice-gateways-to-connect-a-cucm-to-a-pbx" href="#using-voice-gateways-to-connect-a-cucm-to-a-pbx" class="headeranchor-link" aria-hidden="true"><span class="headeranchor"></span></a>Using Voice Gateways to Connect a CUCM to a PBX</h1>
+<p><mark>A second design methodology for using voice gateways is used when companies are making the migration to a Cisco Unified Communications solution</mark>. The process of migrating<br />
+away from a traditional PBX typically involves interconnecting the CUCM and PBX for a period of time. Some users may have new Cisco phones, while others might still have the older phones that connect to the legacy PBX. End users on one system need to be able to<br />
+communicate easily with users on the other. <mark>In this situation, a voice gateway can be used to provide a common channel-signaling method</mark>. A digital trunk interface on the voice gateway connects to a digital trunk interface on the legacy PBX. </p>
+<p><img alt="CUCM to PBX" src="/Users/Liongeek/Documents/MyDocuments/Stage_Coventry/Fedex/work/repolion/voip/images/cucmToPbx.png" /></p>
+<p>The voice gateway represents the jumping-off point from the pure IP switched network and the legacy PBX network. In this particular setup, the two networks are interconnected by a PRI trunk. Depending on the type of PBX used, a different digital trunk might be used. <mark>The key point is that the PBX and voice gateway must use identical signaling on each side.</mark></p>
+<h1 id="voice-gateway-dial-peers"><a name="user-content-voice-gateway-dial-peers" href="#voice-gateway-dial-peers" class="headeranchor-link" aria-hidden="true"><span class="headeranchor"></span></a>Voice Gateway Dial Peers</h1>
+<p>In order to route voice traffic properly from one point to another point using H.323 or SIP voice gateways, we need to configure dial peers. <mark>A dial peer is a device that can make or receive a call in a voice network</mark>.<br><br />
+<strong>With VoIP networks, there are two types of dial peers:</strong></p>
+<ul>
+<li><strong>POTS dial peers</strong>   </li>
+<li><strong>VoIP dial peers</strong></li>
+</ul>
+<h3 id="pots-dial-peers"><a name="user-content-pots-dial-peers" href="#pots-dial-peers" class="headeranchor-link" aria-hidden="true"><span class="headeranchor"></span></a>POTS Dial Peers</h3>
+<p><mark>POTS dial peers are considered to be traditional telephony devices such as analog phones, cellular phones, and fax machines.</mark>From a voice gateway perspective, the POTS dial peer is a simple dial-string-to-port mapping.</p>
+<p><img alt="POTS Dial Peer" src="/Users/Liongeek/Documents/MyDocuments/Stage_Coventry/Fedex/work/repolion/voip/images/potsDialPeer.png" /></p>
+<p>In this example, a single POTS dial peer runs from the analog phone located on the PSTN to our local voice gateway.</p>
+<h3 id="voip-dial-peers"><a name="user-content-voip-dial-peers" href="#voip-dial-peers" class="headeranchor-link" aria-hidden="true"><span class="headeranchor"></span></a>VoIP Dial Peers</h3>
+<p><mark>These dial peers include any VoIP-capable endpoint, router, and gateway within the IP network. Just like POTS dial peers, VoIP dial peers use a dial string for mapping purposes. The difference is that instead of mapping the dial string to a physical interface, the VoIP dial peer maps the dial string to a remote IP network device.</mark> </p>
+<p><img alt="VoIP Dial Peers" src="/Users/Liongeek/Documents/MyDocuments/Stage_Coventry/Fedex/work/repolion/voip/images/voipDialPeers.png" /></p>
+<p>In this example, there is a VoIP dial peer for each side of the IP network. They are needed because each voice gateway requires a dial-peer configuration in order to identify the call source and destination endpoints.</p></article></body></html>
