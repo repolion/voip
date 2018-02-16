@@ -65,9 +65,28 @@ conversion services.
 The product can also be configured to be fully redundant. Unity servers are set up in
 a primary and standby configuration, where the primary server handles all messaging processes. In the event of a primary Unity server failure, the standby server automatically takes over the primary server duties. The primary server stays inactive until an administrator automatically brings it back online as the primary message-processing device.
 
+--------
 
 #### Cisco Unity Connection
 Unity Connection software runs on a Linux-based server platform. It often accompanies CUCMBE implementations and can even reside on the same hardware.
 
 #### Cisco Unity Express
 As with all Express products in Cisco’s lineup, Unity Express runs on the same routers that CUCM Express supports.
+
+--------
+
+# Introducing Cisco IP Phones
+
+__IP phones include hardware- and software-based voice solutions. These IP phones allow the user to make phone calls on- and off-network just like any traditional telephone unit.__ <br>
+
+Some examples of value-added functionality that Cisco IP phones possess:
+
+* __The ability to power the phones using Power over Ethernet (PoE)__
+* __A built-in data PC Ethernet port (1 cale for pc and the phone)__
+* __Fixed and programmable voice feature buttons__
+* __Integration with video services__
+
+# Cisco Analog Telephony Adapter
+__The Cisco Analog Telephony Adapter (ATA)__ is a device that allows standard analog telephones and fax machines to operate on an Ethernet LAN. The ATA has one Ethernet port for network connectivity and two RJ-11 analog ports to connect up to two analog devices. This solution is good if the organization has analog telephony devices it wants to leverage throughout an IP telephony migration.
+
+![Analog Telephony Adapter](/images/ata.png)
