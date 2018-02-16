@@ -1,6 +1,8 @@
 # Cisco Iconography
 
-![Cisco Iconography 1](/images/ciscoIcon1.png)<br>
------
+![Cisco Iconography 1](/images/ciscoIcon1.png)
 <br>
+
+-----
+
 ![Cisco Iconography 2](/images/ciscoIcon2.jpg)
