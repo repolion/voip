@@ -19,8 +19,7 @@ __Exemples:__
 * VoIP allows multiservice access concentrators to send voice and fax traffic over an IP network. 
 
 * In VoIP, digital signal processors (DSPs) segment the voice signal into frames and store them into voice packets. 
-These voice packets are transported via IP in compliance (conformité) with a voice communications protocol or 
-standard such as
+These voice packets are transported via IP in compliance (conformité) with a voice communications protocol or standard such as
 	* H.323
 	* Media Gateway Control Protocol (MGCP)
 	* Session Initiation Protocol (SIP)
@@ -149,7 +148,7 @@ __IVR (Interactive Voice Recorder) is a technology that allows a computer to int
 
 # Components of a VoIP Network
 
-![Components](/images/components.png)
+![Components](images/components.png)
 
 The figure depicts the basic components of a packet voice network:
 
@@ -172,7 +171,7 @@ Other components, such as software voice applications, interactive voice respons
 
 # VoIP Functions
 
-![Components](/images/components2.png)
+![Components](images/components2.png)
 
 In the traditional PSTN telephony network, all of the elements that are required to complete the call are transparent to the end user. Migration to VoIP requires an awareness of these required elements and a thorough understanding of the protocols and components that provide the same functionality in an IP network.
 
@@ -196,7 +195,7 @@ Codecs provide the coding and decoding translation between analog and digital fa
 
 # VoIP Signaling Protocols
 
-![Signaling protocols](/images/signalingProtocols.png)
+![Signaling protocols](images/signalingProtocols.png)
 
 
 * __H.323__: <br> 

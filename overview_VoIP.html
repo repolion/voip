@@ -1,0 +1,1293 @@
+<!DOCTYPE html><html><head><meta charset="utf-8"><style>body {
+  max-width: 980px;
+  border: 1px solid #ddd;
+  outline: 1300px solid #fff;
+  margin: 16px auto;
+}
+
+body .markdown-body
+{
+  padding: 45px;
+}
+
+@font-face {
+  font-family: fontawesome-mini;
+  src: url(data:font/woff;charset=utf-8;base64,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) format('woff');
+}
+
+@font-face {
+  font-family: octicons-anchor;
+  src: url(data:font/woff;charset=utf-8;base64,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) format('woff');
+}
+
+.markdown-body {
+  font-family: sans-serif;
+  -ms-text-size-adjust: 100%;
+  -webkit-text-size-adjust: 100%;
+  color: #333333;
+  overflow: hidden;
+  font-family: "Helvetica Neue", Helvetica, "Segoe UI", Arial, freesans, sans-serif;
+  font-size: 16px;
+  line-height: 1.6;
+  word-wrap: break-word;
+}
+
+.markdown-body a {
+  background: transparent;
+}
+
+.markdown-body a:active,
+.markdown-body a:hover {
+  outline: 0;
+}
+
+.markdown-body b,
+.markdown-body strong {
+  font-weight: bold;
+}
+
+.markdown-body mark {
+  background: #ff0;
+  color: #000;
+  font-style: italic;
+  font-weight: bold;
+}
+
+.markdown-body sub,
+.markdown-body sup {
+  font-size: 75%;
+  line-height: 0;
+  position: relative;
+  vertical-align: baseline;
+}
+.markdown-body sup {
+  top: -0.5em;
+}
+.markdown-body sub {
+  bottom: -0.25em;
+}
+
+.markdown-body h1 {
+  font-size: 2em;
+  margin: 0.67em 0;
+}
+
+.markdown-body img {
+  border: 0;
+}
+
+.markdown-body hr {
+  -moz-box-sizing: content-box;
+  box-sizing: content-box;
+  height: 0;
+}
+
+.markdown-body pre {
+  overflow: auto;
+}
+
+.markdown-body code,
+.markdown-body kbd,
+.markdown-body pre,
+.markdown-body samp {
+  font-family: monospace, monospace;
+  font-size: 1em;
+}
+
+.markdown-body input {
+  color: inherit;
+  font: inherit;
+  margin: 0;
+}
+
+.markdown-body html input[disabled] {
+  cursor: default;
+}
+
+.markdown-body input {
+  line-height: normal;
+}
+
+.markdown-body input[type="checkbox"] {
+  box-sizing: border-box;
+  padding: 0;
+}
+
+.markdown-body table {
+  border-collapse: collapse;
+  border-spacing: 0;
+}
+
+.markdown-body td,
+.markdown-body th {
+  padding: 0;
+}
+
+.markdown-body .codehilitetable {
+  border: 0;
+  border-spacing: 0;
+}
+
+.markdown-body .codehilitetable tr {
+  border: 0;
+}
+
+.markdown-body .codehilitetable pre,
+.markdown-body .codehilitetable div.codehilite {
+  margin: 0;
+}
+
+.markdown-body .linenos,
+.markdown-body .code,
+.markdown-body .codehilitetable td {
+  border: 0;
+  padding: 0;
+}
+
+.markdown-body td:not(.linenos) .linenodiv {
+  padding: 0 !important;
+}
+
+.markdown-body .code {
+  width: 100%;
+}
+
+.markdown-body .linenos div pre,
+.markdown-body .linenodiv pre,
+.markdown-body .linenodiv {
+  border: 0;
+  -webkit-border-radius: 0;
+  -moz-border-radius: 0;
+  border-radius: 0;
+  -webkit-border-top-left-radius: 3px;
+  -webkit-border-bottom-left-radius: 3px;
+  -moz-border-radius-topleft: 3px;
+  -moz-border-radius-bottomleft: 3px;
+  border-top-left-radius: 3px;
+  border-bottom-left-radius: 3px;
+}
+
+.markdown-body .code div pre,
+.markdown-body .code div {
+  border: 0;
+  -webkit-border-radius: 0;
+  -moz-border-radius: 0;
+  border-radius: 0;
+  -webkit-border-top-right-radius: 3px;
+  -webkit-border-bottom-right-radius: 3px;
+  -moz-border-radius-topright: 3px;
+  -moz-border-radius-bottomright: 3px;
+  border-top-right-radius: 3px;
+  border-bottom-right-radius: 3px;
+}
+
+.markdown-body * {
+  -moz-box-sizing: border-box;
+  box-sizing: border-box;
+}
+
+.markdown-body input {
+  font: 13px Helvetica, arial, freesans, clean, sans-serif, "Segoe UI Emoji", "Segoe UI Symbol";
+  line-height: 1.4;
+}
+
+.markdown-body a {
+  color: #4183c4;
+  text-decoration: none;
+}
+
+.markdown-body a:hover,
+.markdown-body a:focus,
+.markdown-body a:active {
+  text-decoration: underline;
+}
+
+.markdown-body hr {
+  height: 0;
+  margin: 15px 0;
+  overflow: hidden;
+  background: transparent;
+  border: 0;
+  border-bottom: 1px solid #ddd;
+}
+
+.markdown-body hr:before,
+.markdown-body hr:after {
+  display: table;
+  content: " ";
+}
+
+.markdown-body hr:after {
+  clear: both;
+}
+
+.markdown-body h1,
+.markdown-body h2,
+.markdown-body h3,
+.markdown-body h4,
+.markdown-body h5,
+.markdown-body h6 {
+  margin-top: 15px;
+  margin-bottom: 15px;
+  line-height: 1.1;
+}
+
+.markdown-body h1 {
+  font-size: 30px;
+}
+
+.markdown-body h2 {
+  font-size: 21px;
+}
+
+.markdown-body h3 {
+  font-size: 16px;
+}
+
+.markdown-body h4 {
+  font-size: 14px;
+}
+
+.markdown-body h5 {
+  font-size: 12px;
+}
+
+.markdown-body h6 {
+  font-size: 11px;
+}
+
+.markdown-body blockquote {
+  margin: 0;
+}
+
+.markdown-body ul,
+.markdown-body ol {
+  padding: 0;
+  margin-top: 0;
+  margin-bottom: 0;
+}
+
+.markdown-body ol ol,
+.markdown-body ul ol {
+  list-style-type: lower-roman;
+}
+
+.markdown-body ul ul ol,
+.markdown-body ul ol ol,
+.markdown-body ol ul ol,
+.markdown-body ol ol ol {
+  list-style-type: lower-alpha;
+}
+
+.markdown-body dd {
+  margin-left: 0;
+}
+
+.markdown-body code,
+.markdown-body pre,
+.markdown-body samp {
+  font-family: Consolas, "Liberation Mono", Menlo, Courier, monospace;
+  font-size: 12px;
+}
+
+.markdown-body pre {
+  margin-top: 0;
+  margin-bottom: 0;
+}
+
+.markdown-body kbd {
+  background-color: #e7e7e7;
+  background-image: -moz-linear-gradient(#fefefe, #e7e7e7);
+  background-image: -webkit-linear-gradient(#fefefe, #e7e7e7);
+  background-image: linear-gradient(#fefefe, #e7e7e7);
+  background-repeat: repeat-x;
+  border-radius: 2px;
+  border: 1px solid #cfcfcf;
+  color: #000;
+  padding: 3px 5px;
+  line-height: 10px;
+  font: 11px Consolas, "Liberation Mono", Menlo, Courier, monospace;
+  display: inline-block;
+}
+
+.markdown-body>*:first-child {
+  margin-top: 0 !important;
+}
+
+.markdown-body>*:last-child {
+  margin-bottom: 0 !important;
+}
+
+.markdown-body .headeranchor-link {
+  position: absolute;
+  top: 0;
+  bottom: 0;
+  left: 0;
+  display: block;
+  padding-right: 6px;
+  padding-left: 30px;
+  margin-left: -30px;
+}
+
+.markdown-body .headeranchor-link:focus {
+  outline: none;
+}
+
+.markdown-body h1,
+.markdown-body h2,
+.markdown-body h3,
+.markdown-body h4,
+.markdown-body h5,
+.markdown-body h6 {
+  position: relative;
+  margin-top: 1em;
+  margin-bottom: 16px;
+  font-weight: bold;
+  line-height: 1.4;
+}
+
+.markdown-body h1 .headeranchor,
+.markdown-body h2 .headeranchor,
+.markdown-body h3 .headeranchor,
+.markdown-body h4 .headeranchor,
+.markdown-body h5 .headeranchor,
+.markdown-body h6 .headeranchor {
+  display: none;
+  color: #000;
+  vertical-align: middle;
+}
+
+.markdown-body h1:hover .headeranchor-link,
+.markdown-body h2:hover .headeranchor-link,
+.markdown-body h3:hover .headeranchor-link,
+.markdown-body h4:hover .headeranchor-link,
+.markdown-body h5:hover .headeranchor-link,
+.markdown-body h6:hover .headeranchor-link {
+  height: 1em;
+  padding-left: 8px;
+  margin-left: -30px;
+  line-height: 1;
+  text-decoration: none;
+}
+
+.markdown-body h1:hover .headeranchor-link .headeranchor,
+.markdown-body h2:hover .headeranchor-link .headeranchor,
+.markdown-body h3:hover .headeranchor-link .headeranchor,
+.markdown-body h4:hover .headeranchor-link .headeranchor,
+.markdown-body h5:hover .headeranchor-link .headeranchor,
+.markdown-body h6:hover .headeranchor-link .headeranchor {
+  display: inline-block;
+}
+
+.markdown-body h1 {
+  padding-bottom: 0.3em;
+  font-size: 2.25em;
+  line-height: 1.2;
+  border-bottom: 1px solid #eee;
+}
+
+.markdown-body h2 {
+  padding-bottom: 0.3em;
+  font-size: 1.75em;
+  line-height: 1.225;
+  border-bottom: 1px solid #eee;
+}
+
+.markdown-body h3 {
+  font-size: 1.5em;
+  line-height: 1.43;
+}
+
+.markdown-body h4 {
+  font-size: 1.25em;
+}
+
+.markdown-body h5 {
+  font-size: 1em;
+}
+
+.markdown-body h6 {
+  font-size: 1em;
+  color: #777;
+}
+
+.markdown-body p,
+.markdown-body blockquote,
+.markdown-body ul,
+.markdown-body ol,
+.markdown-body dl,
+.markdown-body table,
+.markdown-body pre,
+.markdown-body .admonition {
+  margin-top: 0;
+  margin-bottom: 16px;
+}
+
+.markdown-body hr {
+  height: 4px;
+  padding: 0;
+  margin: 16px 0;
+  background-color: #e7e7e7;
+  border: 0 none;
+}
+
+.markdown-body ul,
+.markdown-body ol {
+  padding-left: 2em;
+}
+
+.markdown-body ul ul,
+.markdown-body ul ol,
+.markdown-body ol ol,
+.markdown-body ol ul {
+  margin-top: 0;
+  margin-bottom: 0;
+}
+
+.markdown-body li>p {
+  margin-top: 16px;
+}
+
+.markdown-body dl {
+  padding: 0;
+}
+
+.markdown-body dl dt {
+  padding: 0;
+  margin-top: 16px;
+  font-size: 1em;
+  font-style: italic;
+  font-weight: bold;
+}
+
+.markdown-body dl dd {
+  padding: 0 16px;
+  margin-bottom: 16px;
+}
+
+.markdown-body blockquote {
+  padding: 0 15px;
+  color: #777;
+  border-left: 4px solid #ddd;
+}
+
+.markdown-body blockquote>:first-child {
+  margin-top: 0;
+}
+
+.markdown-body blockquote>:last-child {
+  margin-bottom: 0;
+}
+
+.markdown-body table {
+  display: block;
+  width: 100%;
+  overflow: auto;
+  word-break: normal;
+  word-break: keep-all;
+}
+
+.markdown-body table th {
+  font-weight: bold;
+}
+
+.markdown-body table th,
+.markdown-body table td {
+  padding: 6px 13px;
+  border: 1px solid #ddd;
+}
+
+.markdown-body table tr {
+  background-color: #fff;
+  border-top: 1px solid #ccc;
+}
+
+.markdown-body table tr:nth-child(2n) {
+  background-color: #f8f8f8;
+}
+
+.markdown-body img {
+  max-width: 100%;
+  -moz-box-sizing: border-box;
+  box-sizing: border-box;
+}
+
+.markdown-body code,
+.markdown-body samp {
+  padding: 0;
+  padding-top: 0.2em;
+  padding-bottom: 0.2em;
+  margin: 0;
+  font-size: 85%;
+  background-color: rgba(0,0,0,0.04);
+  border-radius: 3px;
+}
+
+.markdown-body code:before,
+.markdown-body code:after {
+  letter-spacing: -0.2em;
+  content: "\00a0";
+}
+
+.markdown-body pre>code {
+  padding: 0;
+  margin: 0;
+  font-size: 100%;
+  word-break: normal;
+  white-space: pre;
+  background: transparent;
+  border: 0;
+}
+
+.markdown-body .codehilite {
+  margin-bottom: 16px;
+}
+
+.markdown-body .codehilite pre,
+.markdown-body pre {
+  padding: 16px;
+  overflow: auto;
+  font-size: 85%;
+  line-height: 1.45;
+  background-color: #f7f7f7;
+  border-radius: 3px;
+}
+
+.markdown-body .codehilite pre {
+  margin-bottom: 0;
+  word-break: normal;
+}
+
+.markdown-body pre {
+  word-wrap: normal;
+}
+
+.markdown-body pre code {
+  display: inline;
+  max-width: initial;
+  padding: 0;
+  margin: 0;
+  overflow: initial;
+  line-height: inherit;
+  word-wrap: normal;
+  background-color: transparent;
+  border: 0;
+}
+
+.markdown-body pre code:before,
+.markdown-body pre code:after {
+  content: normal;
+}
+
+/* Admonition */
+.markdown-body .admonition {
+  -webkit-border-radius: 3px;
+  -moz-border-radius: 3px;
+  position: relative;
+  border-radius: 3px;
+  border: 1px solid #e0e0e0;
+  border-left: 6px solid #333;
+  padding: 10px 10px 10px 30px;
+}
+
+.markdown-body .admonition table {
+  color: #333;
+}
+
+.markdown-body .admonition p {
+  padding: 0;
+}
+
+.markdown-body .admonition-title {
+  font-weight: bold;
+  margin: 0;
+}
+
+.markdown-body .admonition>.admonition-title {
+  color: #333;
+}
+
+.markdown-body .attention>.admonition-title {
+  color: #a6d796;
+}
+
+.markdown-body .caution>.admonition-title {
+  color: #d7a796;
+}
+
+.markdown-body .hint>.admonition-title {
+  color: #96c6d7;
+}
+
+.markdown-body .danger>.admonition-title {
+  color: #c25f77;
+}
+
+.markdown-body .question>.admonition-title {
+  color: #96a6d7;
+}
+
+.markdown-body .note>.admonition-title {
+  color: #d7c896;
+}
+
+.markdown-body .admonition:before,
+.markdown-body .attention:before,
+.markdown-body .caution:before,
+.markdown-body .hint:before,
+.markdown-body .danger:before,
+.markdown-body .question:before,
+.markdown-body .note:before {
+  font: normal normal 16px fontawesome-mini;
+  -moz-osx-font-smoothing: grayscale;
+  -webkit-user-select: none;
+  -moz-user-select: none;
+  -ms-user-select: none;
+  user-select: none;
+  line-height: 1.5;
+  color: #333;
+  position: absolute;
+  left: 0;
+  top: 0;
+  padding-top: 10px;
+  padding-left: 10px;
+}
+
+.markdown-body .admonition:before {
+  content: "\f056\00a0";
+  color: 333;
+}
+
+.markdown-body .attention:before {
+  content: "\f058\00a0";
+  color: #a6d796;
+}
+
+.markdown-body .caution:before {
+  content: "\f06a\00a0";
+  color: #d7a796;
+}
+
+.markdown-body .hint:before {
+  content: "\f05a\00a0";
+  color: #96c6d7;
+}
+
+.markdown-body .danger:before {
+  content: "\f057\00a0";
+  color: #c25f77;
+}
+
+.markdown-body .question:before {
+  content: "\f059\00a0";
+  color: #96a6d7;
+}
+
+.markdown-body .note:before {
+  content: "\f040\00a0";
+  color: #d7c896;
+}
+
+.markdown-body .admonition::after {
+  content: normal;
+}
+
+.markdown-body .attention {
+  border-left: 6px solid #a6d796;
+}
+
+.markdown-body .caution {
+  border-left: 6px solid #d7a796;
+}
+
+.markdown-body .hint {
+  border-left: 6px solid #96c6d7;
+}
+
+.markdown-body .danger {
+  border-left: 6px solid #c25f77;
+}
+
+.markdown-body .question {
+  border-left: 6px solid #96a6d7;
+}
+
+.markdown-body .note {
+  border-left: 6px solid #d7c896;
+}
+
+.markdown-body .admonition>*:first-child {
+  margin-top: 0 !important;
+}
+
+.markdown-body .admonition>*:last-child {
+  margin-bottom: 0 !important;
+}
+
+/* progress bar*/
+.markdown-body .progress {
+  display: block;
+  width: 300px;
+  margin: 10px 0;
+  height: 24px;
+  -webkit-border-radius: 3px;
+  -moz-border-radius: 3px;
+  border-radius: 3px;
+  background-color: #ededed;
+  position: relative;
+  box-shadow: inset -1px 1px 3px rgba(0, 0, 0, .1);
+}
+
+.markdown-body .progress-label {
+  position: absolute;
+  text-align: center;
+  font-weight: bold;
+  width: 100%; margin: 0;
+  line-height: 24px;
+  color: #333;
+  text-shadow: 1px 1px 0 #fefefe, -1px -1px 0 #fefefe, -1px 1px 0 #fefefe, 1px -1px 0 #fefefe, 0 1px 0 #fefefe, 0 -1px 0 #fefefe, 1px 0 0 #fefefe, -1px 0 0 #fefefe, 1px 1px 2px #000;
+  -webkit-font-smoothing: antialiased !important;
+  white-space: nowrap;
+  overflow: hidden;
+}
+
+.markdown-body .progress-bar {
+  height: 24px;
+  float: left;
+  -webkit-border-radius: 3px;
+  -moz-border-radius: 3px;
+  border-radius: 3px;
+  background-color: #96c6d7;
+  box-shadow: inset 0 1px 0 rgba(255, 255, 255, .5), inset 0 -1px 0 rgba(0, 0, 0, .1);
+  background-size: 30px 30px;
+  background-image: -webkit-linear-gradient(
+    135deg, rgba(255, 255, 255, .4) 27%,
+    transparent 27%,
+    transparent 52%, rgba(255, 255, 255, .4) 52%,
+    rgba(255, 255, 255, .4) 77%,
+    transparent 77%, transparent
+  );
+  background-image: -moz-linear-gradient(
+    135deg,
+    rgba(255, 255, 255, .4) 27%, transparent 27%,
+    transparent 52%, rgba(255, 255, 255, .4) 52%,
+    rgba(255, 255, 255, .4) 77%, transparent 77%,
+    transparent
+  );
+  background-image: -ms-linear-gradient(
+    135deg,
+    rgba(255, 255, 255, .4) 27%, transparent 27%,
+    transparent 52%, rgba(255, 255, 255, .4) 52%,
+    rgba(255, 255, 255, .4) 77%, transparent 77%,
+    transparent
+  );
+  background-image: -o-linear-gradient(
+    135deg,
+    rgba(255, 255, 255, .4) 27%, transparent 27%,
+    transparent 52%, rgba(255, 255, 255, .4) 52%,
+    rgba(255, 255, 255, .4) 77%, transparent 77%,
+    transparent
+  );
+  background-image: linear-gradient(
+    135deg,
+    rgba(255, 255, 255, .4) 27%, transparent 27%,
+    transparent 52%, rgba(255, 255, 255, .4) 52%,
+    rgba(255, 255, 255, .4) 77%, transparent 77%,
+    transparent
+  );
+}
+
+.markdown-body .progress-100plus .progress-bar {
+  background-color: #a6d796;
+}
+
+.markdown-body .progress-80plus .progress-bar {
+  background-color: #c6d796;
+}
+
+.markdown-body .progress-60plus .progress-bar {
+  background-color: #d7c896;
+}
+
+.markdown-body .progress-40plus .progress-bar {
+  background-color: #d7a796;
+}
+
+.markdown-body .progress-20plus .progress-bar {
+  background-color: #d796a6;
+}
+
+.markdown-body .progress-0plus .progress-bar {
+  background-color: #c25f77;
+}
+
+.markdown-body .candystripe-animate .progress-bar{
+  -webkit-animation: animate-stripes 3s linear infinite;
+  -moz-animation: animate-stripes 3s linear infinite;
+  animation: animate-stripes 3s linear infinite;
+}
+
+@-webkit-keyframes animate-stripes {
+  0% {
+    background-position: 0 0;
+  }
+
+  100% {
+    background-position: 60px 0;
+  }
+}
+
+@-moz-keyframes animate-stripes {
+  0% {
+    background-position: 0 0;
+  }
+
+  100% {
+    background-position: 60px 0;
+  }
+}
+
+@keyframes animate-stripes {
+  0% {
+    background-position: 0 0;
+  }
+
+  100% {
+    background-position: 60px 0;
+  }
+}
+
+.markdown-body .gloss .progress-bar {
+  box-shadow:
+    inset 0 4px 12px rgba(255, 255, 255, .7),
+    inset 0 -12px 0 rgba(0, 0, 0, .05);
+}
+
+/* Multimarkdown Critic Blocks */
+.markdown-body .critic_mark {
+  background: #ff0;
+}
+
+.markdown-body .critic_delete {
+  color: #c82829;
+  text-decoration: line-through;
+}
+
+.markdown-body .critic_insert {
+  color: #718c00 ;
+  text-decoration: underline;
+}
+
+.markdown-body .critic_comment {
+  color: #8e908c;
+  font-style: italic;
+}
+
+.markdown-body .headeranchor {
+  font: normal normal 16px octicons-anchor;
+  line-height: 1;
+  display: inline-block;
+  text-decoration: none;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+  -webkit-user-select: none;
+  -moz-user-select: none;
+  -ms-user-select: none;
+  user-select: none;
+}
+
+.headeranchor:before {
+  content: '\f05c';
+}
+
+.markdown-body .task-list-item {
+  list-style-type: none;
+}
+
+.markdown-body .task-list-item+.task-list-item {
+  margin-top: 3px;
+}
+
+.markdown-body .task-list-item input {
+  margin: 0 4px 0.25em -20px;
+  vertical-align: middle;
+}
+
+/* Media */
+@media only screen and (min-width: 480px) {
+  .markdown-body {
+    font-size:14px;
+  }
+}
+
+@media only screen and (min-width: 768px) {
+  .markdown-body {
+    font-size:16px;
+  }
+}
+
+@media print {
+  .markdown-body * {
+    background: transparent !important;
+    color: black !important;
+    filter:none !important;
+    -ms-filter: none !important;
+  }
+
+  .markdown-body {
+    font-size:12pt;
+    max-width:100%;
+    outline:none;
+    border: 0;
+  }
+
+  .markdown-body a,
+  .markdown-body a:visited {
+    text-decoration: underline;
+  }
+
+  .markdown-body .headeranchor-link {
+    display: none;
+  }
+
+  .markdown-body a[href]:after {
+    content: " (" attr(href) ")";
+  }
+
+  .markdown-body abbr[title]:after {
+    content: " (" attr(title) ")";
+  }
+
+  .markdown-body .ir a:after,
+  .markdown-body a[href^="javascript:"]:after,
+  .markdown-body a[href^="#"]:after {
+    content: "";
+  }
+
+  .markdown-body pre {
+    white-space: pre;
+    white-space: pre-wrap;
+    word-wrap: break-word;
+  }
+
+  .markdown-body pre,
+  .markdown-body blockquote {
+    border: 1px solid #999;
+    padding-right: 1em;
+    page-break-inside: avoid;
+  }
+
+  .markdown-body .progress,
+  .markdown-body .progress-bar {
+    -moz-box-shadow: none;
+    -webkit-box-shadow: none;
+    box-shadow: none;
+  }
+
+  .markdown-body .progress {
+    border: 1px solid #ddd;
+  }
+
+  .markdown-body .progress-bar {
+    height: 22px;
+    border-right: 1px solid #ddd;
+  }
+
+  .markdown-body tr,
+  .markdown-body img {
+    page-break-inside: avoid;
+  }
+
+  .markdown-body img {
+    max-width: 100% !important;
+  }
+
+  .markdown-body p,
+  .markdown-body h2,
+  .markdown-body h3 {
+    orphans: 3;
+    widows: 3;
+  }
+
+  .markdown-body h2,
+  .markdown-body h3 {
+    page-break-after: avoid;
+  }
+}
+</style><title>overview_VoIP</title></head><body><article class="markdown-body"><h1 id="cipt1"><a name="user-content-cipt1" href="#cipt1" class="headeranchor-link" aria-hidden="true"><span class="headeranchor"></span></a>CIPT1</h1>
+<h1 id="cisco-voip"><a name="user-content-cisco-voip" href="#cisco-voip" class="headeranchor-link" aria-hidden="true"><span class="headeranchor"></span></a>CISCO VoIP:</h1>
+<p>Volume 1 V 6.0</p>
+<h1 id="overview"><a name="user-content-overview" href="#overview" class="headeranchor-link" aria-hidden="true"><span class="headeranchor"></span></a>Overview</h1>
+<ul>
+<li>
+<p>VoIP is a Layer 3 network protocol</p>
+</li>
+<li>
+<p>VoIP uses various link-layer protocols <br><br />
+<strong>Exemples:</strong></p>
+<ul>
+<li>PPP</li>
+<li>Frame Relay</li>
+<li>ATM </li>
+</ul>
+</li>
+<li>
+<p>VoIP allows multiservice access concentrators to send voice and fax traffic over an IP network. </p>
+</li>
+<li>
+<p>In VoIP, digital signal processors (DSPs) segment the voice signal into frames and store them into voice packets. <br />
+These voice packets are transported via IP in compliance (conformité) with a voice communications protocol or <br />
+standard such as</p>
+<ul>
+<li>H.323</li>
+<li>Media Gateway Control Protocol (MGCP)</li>
+<li>Session Initiation Protocol (SIP)</li>
+</ul>
+</li>
+</ul>
+<table>
+<thead>
+<tr>
+<th align="left">LAYERS</th>
+<th align="right">PROTOCOLS</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td align="left">APPLICATION</td>
+<td align="right">Call Manager, NetMeeting, Applications</td>
+</tr>
+<tr>
+<td align="left">PRESENTATION</td>
+<td align="right">Codecs,</td>
+</tr>
+<tr>
+<td align="left">SESSION</td>
+<td align="right">SIP, H.323, MGCP</td>
+</tr>
+<tr>
+<td align="left">TRANSPORT</td>
+<td align="right">RTP, UDP, TCP</td>
+</tr>
+<tr>
+<td align="left">NETWORK</td>
+<td align="right">IP</td>
+</tr>
+<tr>
+<td align="left">DATA LINK</td>
+<td align="right">Frame Relay, ATM, Ethernet, Point-to-point Protocol, PPP, MLP, &hellip;</td>
+</tr>
+<tr>
+<td align="left">PHYSICAL</td>
+<td align="right">Raw Data</td>
+</tr>
+</tbody>
+</table>
+<blockquote>
+<p>A codec is a device or computer program for encoding or decoding a digital data stream or signal</p>
+</blockquote>
+<p>Cisco IOS software supports the following call <br />
+control protocols and standards in Release 12.2:</p>
+<h2 id="h323"><a name="user-content-h323" href="#h323" class="headeranchor-link" aria-hidden="true"><span class="headeranchor"></span></a>H.323</h2>
+<p>The International Telecommunication Union-Telecommunications Standardization Sector <br />
+(ITU-T) specification for sending voice, video, and data across a network. The H.323 specification <br />
+includes several related standards,<br />
+ such as H.225 (call control), H.235 (security), H.245 (media path <br />
+and parameter negotiation), and H.450 (supplementary services).</p>
+<h2 id="mgcp-media-gateway-control-protocol"><a name="user-content-mgcp-media-gateway-control-protocol" href="#mgcp-media-gateway-control-protocol" class="headeranchor-link" aria-hidden="true"><span class="headeranchor"></span></a>MGCP (Media Gateway Control Protocol)</h2>
+<p>An Internet Engineering Task Force (IETF) draft standard for controlling voice gateways through<br />
+IP networks.<br />
+Media Gateway Control Protocol (MGCP) is a plain-text protocol used by call-control devices to manage IP Telephony gateways.</p>
+<p>MGCP is a master/slave <strong>protocol that allows a call control device (such as Cisco CallManager) to take control of a specific port on a gateway</strong>. <br />
+This has the advantage of centralized gateway administration and provides for largely scalable IP Telephony solutions. With this protocol, the <strong>Cisco CallManager</strong> knows and controls the state of each individual port on the gateway. It allows complete control of the dial plan from Cisco CallManager, and gives CallManager per-port control of connections to the <strong>public switched telephone network (PSTN)</strong>, legacy <strong>PBX</strong>, voice mail systems, <strong>plain old telephone service (POTS)</strong> phones, and so forth. </p>
+<p>Another concept relevant to the MGCP implementation with Cisco CallManager is PRI Backhaul&hellip;</p>
+<h2 id="sip-session-initiation-protocol"><a name="user-content-sip-session-initiation-protocol" href="#sip-session-initiation-protocol" class="headeranchor-link" aria-hidden="true"><span class="headeranchor"></span></a>SIP (Session Initiation Protocol)</h2>
+<p>It&rsquo;s an aplication-layer control protocol that can be used to establish, maintain, and terminate calls between two or more endpoints. SIP is an alternative protocol developed by the Internet Engineering Task Force (IETF) for multimedia conferencing over IP. SIP features are compliant with IETF RFC 2543, SIP: Session Initiation Protocol, published in March 1999.</p>
+<p>The Cisco SIP implementation enables supported Cisco platforms to signal the setup of voice and multimedia calls over IP networks.</p>
+<p>Like other VoIP protocols, SIP is designed to address the functions of signaling and session management within a packet telephony network. Signaling allows call information to be carried across network boundaries. Session management provides the ability to control the attributes of an end-to-end call.</p>
+<hr />
+<h1 id="important-knowledge"><a name="user-content-important-knowledge" href="#important-knowledge" class="headeranchor-link" aria-hidden="true"><span class="headeranchor"></span></a>Important Knowledge</h1>
+<h2 id="pstn-public-switched-telephone-network"><a name="user-content-pstn-public-switched-telephone-network" href="#pstn-public-switched-telephone-network" class="headeranchor-link" aria-hidden="true"><span class="headeranchor"></span></a>PSTN (public switched telephone network)</h2>
+<p>The <strong>Public Switched Telephone Network</strong>, also known as <strong>Plain Old Telephone Service (POTS)</strong>, is the wired phone system over which landline telephone calls are made. The PSTN relies on circuit switching. To connect one phone to another, the phone call is routed through numerous switches operating on a local, regional, national or international level. The connection established between the two phones is called a circuit.<br />
+<br><br><br />
+In the early days, phone calls traveled as analog signals across copper wire. Every phone call needed its own dedicated copper wire connecting the two phones. That&rsquo;s why you needed operators&rsquo; assistance in making calls.</p>
+<h2 id="dsps-digital-signal-processing"><a name="user-content-dsps-digital-signal-processing" href="#dsps-digital-signal-processing" class="headeranchor-link" aria-hidden="true"><span class="headeranchor"></span></a>DSPs (digital signal processing)</h2>
+<p>Digital signal processing (DSP) refers to various techniques for improving the accuracy and reliability of digital communications.<br />
+Basically, DSP works by clarifying, or standardizing, the levels or states of a digital signal. ADSP circuit is able to differentiate between human-made signals,which are orderly, and noise, which is inherently chaotic.</p>
+<h2 id="dtmf-dual-tone-multi-frequency"><a name="user-content-dtmf-dual-tone-multi-frequency" href="#dtmf-dual-tone-multi-frequency" class="headeranchor-link" aria-hidden="true"><span class="headeranchor"></span></a>DTMF (Dual-tone multi-frequency)</h2>
+<p>In modern communication systems you are likely not using DTMF. As we move to SIP and other forms of digital communication we are not actually transmitting tones at all. Both when dialing a phone number and when providing touch-tone responses to an IVR you may hear the tone but that is actually your phone playing the tone locally for your benefit. Behind the scenes a DTMF value is sent digitally without any tone being transmitted at all. Depending on the connection between you and the remote system there may never be a tone generated at all.</p>
+<h2 id="cisco-unified-communications-architecture"><a name="user-content-cisco-unified-communications-architecture" href="#cisco-unified-communications-architecture" class="headeranchor-link" aria-hidden="true"><span class="headeranchor"></span></a>Cisco Unified Communications architecture</h2>
+<p>The Cisco Unified Communications system fully integrates communications by enabling data, voice, and video to be transmitted over a single network infrastructure using standards-based IP.<br />
+The Cisco Unified Communications system provides and maintains a high level of <strong>availability</strong>, <strong>quality of service (QoS)</strong>, and <strong>security</strong> for the network.</p>
+<p><strong>The Cisco Unified Communications system incorporates and integrates the following communications technologies</strong>:</p>
+<ul>
+<li>
+<p><strong>IP telephony</strong>: <br />
+IP telephony refers to technology that transmits voice communications over a network using IP standards. Cisco Unified Communications includes hardware and software products such as call-processing agents, IP phones (both wired and wireless), voice-messaging systems, video devices, and many special applications.</p>
+</li>
+<li>
+<p><strong>Customer contact center</strong>: <br />
+Cisco IP Contact Center products combine strategy with architecture to enable efficient and effective customer communications across a globally capable network. This strategy allows organizations to draw from a broader range of resources to service customers. These resources include access to a large pool of agents and multiple channels of communication as well as customer self-help tools.</p>
+</li>
+<li>
+<p><strong>Video telephony</strong>: <br />
+Cisco Unified Video Advantage products enable real-time video communications and collaboration using the same IP network and call-processing agent as Cisco Unified Communications. With Cisco Unified Video Advantage, making a video call is just as easy as dialing a phone number.</p>
+</li>
+<li>
+<p><strong>Rich-media conferencing</strong>: <br />
+Cisco Conference Connection and Cisco Unified MeetingPlace enhance the virtual meeting environment with an integrated set of IP-based tools for voice, video, and web conferencing.</p>
+</li>
+<li>
+<p><strong>Third-party applications</strong>: <br />
+Cisco works with cutting-edge companies to provide a broad selection of third-party IP communications applications and products. These third-party applications help businesses focus on critical needs such as messaging, customer care, and workforce optimization.</p>
+</li>
+</ul>
+<hr />
+<h1 id="voip-essentials"><a name="user-content-voip-essentials" href="#voip-essentials" class="headeranchor-link" aria-hidden="true"><span class="headeranchor"></span></a>VoIP Essentials</h1>
+<p>VoIP is the family of technologies that allow IP networks to be used for voice applications such as telephony, voice instant messaging, and teleconferencing. <br><br />
+VoIP defines a way to carry voice calls over an IP network, including how voice streams are digitized and packetized. IP telephony utilizes VoIP standards to create a telephony system where higher-level features, such as advanced call routing, voice mail, contact centers, and so on, can be utilized.<br />
+VoIP services convert your voice into a digital signal that travels over the Internet. If you are calling a traditional phone number, the signal is converted to a traditional telephone signal before it reaches the destination.</p>
+<p>VoIP allows to make a call directly from <br />
+<em> <strong>a computer</strong><br />
+</em> <strong>a special VoIP phone</strong><br />
+* <strong>a traditional phone connected to a special adapter</strong></p>
+<p>In addition, wireless “hot spots” in locations such as airports, parks, and cafes that allow you to connect to the Internet may enable you to use VoIP service.</p>
+<h1 id="business-case"><a name="user-content-business-case" href="#business-case" class="headeranchor-link" aria-hidden="true"><span class="headeranchor"></span></a>Business Case</h1>
+<p>Provides<br />
+<em> <strong>Cost savings</strong><br />
+</em> <strong>Flexibility</strong><br />
+* <strong>Advanced features</strong><br />
+Some examples of the advanced features provided by current VoIP applications<br />
+    * <strong>Advanced call routing:</strong> <br><br />
+    When multiple paths exist to connect a call to its destination, some of these paths may be preferred over others based on cost, distance, quality, partner handoffs, traffic load, or various other considerations.<br />
+<strong>Least-cost routing</strong> and <strong>time-of-day routing</strong> are two examples of advanced call routing that can be implemented to determine the best possible route for each call.<br><br><br />
+    * <strong>Unified messaging:</strong> <br><br />
+    Unified messaging improves communications and productivity. It provides a single user interface for messages that have been delivered over a variety of media. For example, users can read their <strong>e-mail</strong>, hear their <strong>voice mail</strong>, and view <strong>fax messages</strong> by accessing a single inbox.<br><br><br />
+    * <strong>Integrated information systems:</strong> <br><br />
+    Organizations use VoIP to affect business process transformation. These processes include centralized call control, geographically dispersed virtual contact centers, and access to resources and self-help tools.<br><br><br />
+    * <strong>Long-distance toll bypass:</strong> <br><br />
+    Long-distance toll bypass is an attractive solution for organizations that place a significant number of calls between sites that are charged traditional long-distance fees. In this case, it may be more cost-effective to use VoIP to place those calls across the IP network. If the IP WAN becomes congested, calls can overflow into the PSTN, ensuring that there is no degradation in voice quality.<br><br><br />
+    * <strong>Voice security:</strong> <br><br />
+    There are mechanisms in the IP network that allow the administrator to ensure that IP conversations are secure. Encryption of sensitive signaling header fields and message bodies protect the packets in case of unauthorized packet interception.<br><br><br />
+    * <strong>Customer relationships:</strong> <br><br />
+     The ability to provide customer support through multiple media such as telephone, chat, and e-mail, builds solid customer satisfaction and loyalty. A pervasive IP network allows organizations to provide contact center agents with consolidated and up-to-date customer records along with the related customer communication. Access to this information allows quick problem solving, which, in turn, builds strong customer relationships.<br><br><br />
+    * <strong>Telephony application services:</strong> <br><br />
+    Extensible Markup Language (XML) services on Cisco Unified IP phones give users another way to perform or access more business applications. Some examples of XML-based services on IP phones are user stock quotes, inventory checks, direct-dial directory, announcements, and advertisements. The IP phones are equipped with a pixel-based display that can show full graphics instead of just text on the window. The pixel-based display capabilities allow you to use sophisticated graphical presentations for applications on Cisco IP phones and make them available at any desktop, counter, or location.<br><br></p>
+<p>Note:</p>
+<blockquote>
+<p><strong>LCR (Least-cost-routing)</strong> It is the process of selecting the path of outbound communications traffic based on cost.<br />
+<strong>TOD (time-of-day routing)</strong> Time of Day routing is a VoIP service that allows for flexibility in an organizations’ working. It permits the routing of incoming phone calls to different phone numbers or to voicemail depending on the time of the day or the day of the week.<br />
+__IVR (Interactive Voice Recorder) is a technology that allows a computer to interact with humans through the use of voice and DTMF tones input via a keypad.</p>
+</blockquote>
+<h1 id="components-of-a-voip-network"><a name="user-content-components-of-a-voip-network" href="#components-of-a-voip-network" class="headeranchor-link" aria-hidden="true"><span class="headeranchor"></span></a>Components of a VoIP Network</h1>
+<p><img alt="Components" src="/Users/Liongeek/Documents/MyDocuments/Stage_Coventry/Fedex/work/repolion/voip/images/components.png" /></p>
+<p>The figure depicts the basic components of a packet voice network:</p>
+<ul>
+<li><strong>IP phones</strong>: <br><br />
+IP phones provide an IP endpoint for voice communication.</li>
+<li><strong>Gatekeeper</strong>: <br><br />
+The gatekeeper provides Call Admission Control (CAC), bandwidth control and management, and address translation.</li>
+<li><strong>Gateway</strong>: <br><br />
+The gateway provides translation between VoIP and non-VoIP networks such as the PSTN. Gateways also provide physical access for local analog and digital voice devices such as telephones, fax machines, key sets, and PBXs.</li>
+<li><strong>Multipoint control unit</strong>: <br><br />
+The multipoint control unit provides real-time connectivity for participants in multiple locations to attend the same videoconference or meeting.</li>
+<li><strong>Call agent</strong>: <br><br />
+The call agent provides call control for IP phones, CAC, bandwidth control and management, and address translation.</li>
+<li><strong>Application servers</strong>: <br><br />
+Application servers provide services such as voice mail, unified messaging, and Cisco Unified Communications Manager Attendant Console.</li>
+<li><strong>Videoconference station</strong>: <br><br />
+The videoconference station provides access for end-user participation in videoconferencing. The videoconference station contains a video capture device for video input and a microphone for audio input. The user can view video streams and hear the audio that originates at a remote user station.</li>
+</ul>
+<p>Other components, such as software voice applications, interactive voice response (IVR) systems, and softphones, provide additional services to meet the needs of an enterprise site.</p>
+<h1 id="voip-functions"><a name="user-content-voip-functions" href="#voip-functions" class="headeranchor-link" aria-hidden="true"><span class="headeranchor"></span></a>VoIP Functions</h1>
+<p><img alt="Components" src="/Users/Liongeek/Documents/MyDocuments/Stage_Coventry/Fedex/work/repolion/voip/images/components2.png" /></p>
+<p>In the traditional PSTN telephony network, all of the elements that are required to complete the call are transparent to the end user. Migration to VoIP requires an awareness of these required elements and a thorough understanding of the protocols and components that provide the same functionality in an IP network.</p>
+<h3 id="required-voip-functionality-includes-these-functions"><a name="user-content-required-voip-functionality-includes-these-functions" href="#required-voip-functionality-includes-these-functions" class="headeranchor-link" aria-hidden="true"><span class="headeranchor"></span></a>Required VoIP functionality includes these functions:</h3>
+<ul>
+<li>
+<p><strong>Signaling</strong>: <br><br />
+Signaling is the ability to generate and exchange the control information that will be used to establish, monitor, and release connections between two endpoints. <br><br><br />
+Voice signaling requires the ability to provide supervisory, address, and alerting functionality between nodes. The PSTN network uses Signaling System 7 (SS7) to transport control messages. <br><br />
+<strong>VoIP presents several options for signaling, including H.323, session initiation protocol (SIP), H.248, Media Gateway Control Protocol (MGCP), and Skinny Call Control Protocol (SCCP)</strong>. <br><br><br />
+Signaling protocols are classified either as peer-to-peer or client/server architectures. <br><br><br />
+SIP and H.323 are examples of peer-to-peer signaling protocols in which the end devices or gateways contain the intelligence to initiate and terminate calls and interpret call control messages. <br><br><br />
+H.248, SCCP, and MGCP are examples of client/server protocols in which the endpoints or gateways do not contain call control intelligence but send or receive event notifications to the server commonly referred to as the call agent. <br><br><br />
+For example, when an MGCP gateway detects that a telephone has gone off hook, it does not know to automatically provide a dial tone. The gateway sends an event notification to the call agent,telling the agent that an off-hook condition has been detected. The call agent notifies the gateway to provide a dial tone.</p>
+</li>
+<li>
+<p><strong>Database services</strong>: <br><br />
+Access to services, such as toll-free numbers or caller ID, requires the ability to query a database to determine whether the call can be placed or information can be made available. Database services include access to billing information, caller name (CNAM) delivery, toll-free database services, and calling-card services. VoIP service providers can differentiate their services by providing access to many unique database services. <br><br><br />
+For example, to simplify fax access to mobile users, a provider may build a service that converts fax to e-mail. Another example would be to provide a call notification service that places outbound calls with prerecorded messages at specific times to notify users of such events as school closures, wakeup calls, or appointments.</p>
+</li>
+<li>
+<p><strong>Codecs</strong>:<br><br />
+Codecs provide the coding and decoding translation between analog and digital facilities. Each codec type defines the method of voice coding and the compression mechanism that is used to convert the voice stream. The PSTN uses TDM to carry each voice call. Each voice channel reserves 64 kb/s of bandwidth and uses the G.711 codecs to convert the analog voice wave to a 64-kb/s digitized voice stream. In VoIP design, codecs may compress voice beyond the 64-kb/s voice stream to allow more efficient use of network resources. The most widely used codec in the WAN environment is G.729, which compresses the voice stream to 8 kb/s.</p>
+</li>
+</ul>
+<h1 id="voip-signaling-protocols"><a name="user-content-voip-signaling-protocols" href="#voip-signaling-protocols" class="headeranchor-link" aria-hidden="true"><span class="headeranchor"></span></a>VoIP Signaling Protocols</h1>
+<p><img alt="Signaling protocols" src="/Users/Liongeek/Documents/MyDocuments/Stage_Coventry/Fedex/work/repolion/voip/images/signalingProtocols.png" /></p>
+<ul>
+<li>
+<p><strong>H.323</strong>: <br> <br />
+H.323 is a standard that specifies the components, protocols, and procedures that provide multimedia communication services—real-time audio, video, and data communications—over packet networks, including IP networks. H.323 is part of a family of ITU-T recommendations called H.32x that provides multimedia communication services over a variety of networks. It is actually an umbrella of standards that define all aspects of synchronized voice, video, and data transmission. It also defines end-to-end call signaling.</p>
+</li>
+<li>
+<p><strong>MGCP</strong>: <br> <br />
+MGCP is a method for PSTN gateway control or thin device control. MGCP defines a protocol that controls VoIP gateways that are connected to external call control devices, referred to as call agents. MGCP provides the signaling capability for less expensive edge devices, such as gateways, that may not have a full voice-signaling protocol such as H.323 implemented. <br><br><br />
+For example, any time an event such as off hook occurs at the voice port of a gateway, the voice port reports that event to the call agent. The call agent then signals that device to provide a service, such as dial-tone signaling.</p>
+</li>
+<li>
+<p><strong>SIP</strong>: <br> <br />
+SIP is a detailed protocol that specifies the commands and responses to set up and tear down calls. SIP also details features such as security, proxy, and transport control protocol (TCP or User Datagram Protocol [UDP]) services. SIP and its partner protocols, Session Announcement Protocol (SAP) and Session Description Protocol (SDP), provide announcements and information about multicast sessions to users on a network. SIP defines end-to-end call signaling between devices. SIP is a text-based protocol that borrows many elements of HTTP, using the same transaction request and response model and similar header and response codes. It also adopts a modified form of the URL addressing scheme that is used within e-mail that is based on Simple Mail Transfer Protocol (SMTP).</p>
+</li>
+</ul>
+<p>This protocol is used between the Call Manager and the phone device</p>
+<ul>
+<li><strong>SCCP</strong>: <br />
+<br> SCCP is a Cisco proprietary protocol used between Cisco Unified Communications Manager and Cisco VoIP phones. The end stations (telephones) that use SCCP are called Skinny clients, which consume less processing overhead. The client communicates with the Cisco Unified Communications Manager using connection-oriented (TCP/IP-based) communication to establish a call with another H.323-compliant end station.</li>
+</ul>
+<p>This protocol is used between the Call Manager and the phone device</p>
+<blockquote>
+<p>Phone devices can use sccp or sip when communicating with the CM, some can do both</p>
+</blockquote>
+<h1 id="h323_1"><a name="user-content-h323_1" href="#h323_1" class="headeranchor-link" aria-hidden="true"><span class="headeranchor"></span></a>H.323</h1>
+<p>Today, H.323 is the most widely deployed standards-based voice and videoconferencing standard for packet-switched networks.</p>
+<h3 id="h323-suite"><a name="user-content-h323-suite" href="#h323-suite" class="headeranchor-link" aria-hidden="true"><span class="headeranchor"></span></a>H.323 suite:</h3>
+<ul>
+<li>Approved in 1996 by the ITU-T.</li>
+<li>Peer-to-peer protocol where end devices initiate sessions.</li>
+<li>Widely used with gateways, gatekeepers, or third-party H.323 clients, especially video terminals in Cisco Unified Communications.</li>
+<li>H.323 gateways are never registered with Cisco Unified Communications Manager; only the IP address is available to confirm that communication is possible.</li>
+</ul>
+<h3 id="the-protocols-specified-by-h323-include-the-following"><a name="user-content-the-protocols-specified-by-h323-include-the-following" href="#the-protocols-specified-by-h323-include-the-following" class="headeranchor-link" aria-hidden="true"><span class="headeranchor"></span></a>The protocols specified by H.323 include the following:</h3>
+<ul>
+<li><strong>H.225 call signaling</strong>: H.225 call signaling is used to establish a connection between two H.323 endpoints. This connection is achieved by exchanging H.225 protocol messages on the call-signaling channel. The call-signaling channel is opened between two H.323 endpoints or between an endpoint and the gatekeeper. <br></li>
+<li><strong>H.225 Registration, Admission, and Status</strong>: Registration, Admission, and Status (RAS) is the protocol between endpoints (terminals and gateways) and gatekeepers. The RAS is used to perform registration, admission control, bandwidth changes, and status and disengage procedures between endpoints and gatekeepers. A RAS channel is used to exchange RAS messages. This signaling channel is opened between an endpoint and a gatekeeper prior to the establishment of any other channels.<br></li>
+<li><strong>H.245 control signaling</strong>: <br><br />
+H.245 control signaling is used to exchange end-to-end control messages governing the operation of the H.323 endpoint. These control messages carry information related to the following:<ul>
+<li>Capabilities exchange</li>
+<li>Opening and closing of logical channels used to carry media streams</li>
+<li>Flow-control messages</li>
+<li>
+<p>General commands and indications</p>
+<ul>
+<li>
+<p><strong>Audio codecs</strong>:<br> An audio codec encodes the audio signal from the microphone for transmission on the transmitting H.323 terminal and decodes the received audio code that is sent to the speaker on the receiving H.323 terminal. Because audio is the minimum service provided by the H.323 standard, all H.323 terminals must have at least one audio codec support, as specified in the ITU-T <strong>G.711</strong> recommendation (audio coding at 64 kb/s). Additional audio codec recommendations such as <strong>G.722</strong> (64, 56, and 48 kb/s), G.723.1 (5.3 and 6.3 kb/s), G.728 (16 kb/s), and G.729 (8 kb/s) may also be supported.</p>
+</li>
+<li>
+<p><strong>Video codecs</strong>:<br> A video codec encodes video from the camera for transmission on the transmitting H.323 terminal and decodes the received video code that is sent to the video display on the receiving H.323 terminal. Because H.323 specifies support of video as optional, the support of video codecs is optional as well. However, any H.323 terminal providing video communications must support video encoding and decoding as specified in the ITU-T H.261 recommendation.</p>
+</li>
+</ul>
+</li>
+</ul>
+</li>
+</ul>
+<blockquote>
+<p>In IP communications environments, H.323 is widely used with gateways, gatekeepers, and third-party H.323 clients, especially video terminals. Connections are configured between devices using static destination IP addresses.<br />
+Note Because H.323 is a peer-to-peer protocol, H.323 gateways are not registered with Cisco Unified Communications Manager as an endpoint. An IP address is configured in the Cisco Unified Communications Manager to confirm that communication is possible.</p>
+<p>Difference between codec G.729 and G.711<br />
+&hellip;<br />
+&hellip;</p>
+</blockquote>
+<hr />
+<h1 id="media-gateway-control-protocol"><a name="user-content-media-gateway-control-protocol" href="#media-gateway-control-protocol" class="headeranchor-link" aria-hidden="true"><span class="headeranchor"></span></a>Media Gateway Control Protocol</h1></article></body></html>
