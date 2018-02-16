@@ -229,3 +229,19 @@ Elsewhere, 46 B-Channels and 2 D-Channels
 <mark>Even when two devices speak natively on an IP network, they still may need DSP resources to communicate properly. When two VoIP devices wish to talk to one another over the IP network, both need to be able to understand the codec that is being used. If one VoIP end unit uses a codec that the other end unit does not understand, a DSP can be used to transcode the stream into a codec that is supported.<mark> If you require hardware transcoding in your voice network, you can connect your CUCM to a DSP farm, which is normally found on a voice gateway. Essentially, you configure SCCP signaling between the CUCM and the voice gateway, which contains DSP resources. <mark>When the CUCM receives a voice stream that requires transcoding, the stream is directed to the voice gateway using SCCP.
 The types of codecs you need to transcode are a factor in how many DSP resources you need on your voice gateway. Usually, the more compressed the audio signal is,
 the more DSP resources are required for transcoding into another codec. Voice codecs are classified by complexity; </mark>
+
+-----------
+### Examples "May or may not be needed on your network".
+
+#### Example 1: Cisco Phones Running G.711 and G.729
+Suppose we have two Cisco phones, both 7960G desk phones. They are configured and running on a CUCM Express system. By default, the codec used for all VoIP on the CUCM Express is G.711. Let’s say that we change the codec of one of the phones to G.729. Now we have a situation where one phone is using the G.711 codec and the other is using
+G.729. If one phone calls the other, we will need DSP resources to transcode one codec into another, right? Well, not necessarily! Because the Cisco IP phones understand both codecs, when the call setup occurs, the phones will actually negotiate which codec is used. If they can both talk natively using one codec, that’s what they’ll do. If they do not have
+a common codec, then DSP resources will be needed. In our example, the phones will
+                82 Chapter 3   Voice over IP (VoIP)
+negotiate and end up using the G.729 codec. Why did they choose G.729? If there is a choice between two or more codecs that both endpoints natively speak, they will choose the one that offers the most compression and therefore uses the least bandwidth.<br>
+
+#### Example 2: One Cisco Phone Running G.729 and a Third-Party Phone Running G.726
+In this situation we have a Cisco phone that can understand G.729 and G.711. The third- party phone can use only the G.726 codec. In this situation, we’ll need to tap into the DSP resources to perform transcoding between the two endpoints.
+Echo Cancellation
+Echo is the reflection of sound that arrives to the listener a period of time after the direct sound is heard. A certain amount of echo is experienced on most voice calls and up to a certain point is tolerated. <mark>When analog signals are converted to digital signals and then compressed using codecs, echo is often amplified to the point where it severely degrades the quality of the call. DSP resources are used to assist in the elimination of echo when converting from one voice signal into another. Echo cancellation is performed by default</mark>.
+------------
