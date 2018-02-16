@@ -1,3 +1,14 @@
+---
+title: "CCNA VOICE"
+author: "Olivier C"
+date: "2018 February 15"
+output: 
+  html_document:
+     css: /style/style.css
+     self_contained: no
+
+---
+
 CCNA VOICE
 ===========
 
@@ -9,8 +20,8 @@ Version 2010
 
 # Introducing the Cisco Unified Communications Manager Lineup
 
-In Cisco’s Unified Communications architecture, Unified Communications Managers are what makes IP telephony possible. These hardware/software devices are the brains that handle IP call processing. The call-processing portion of a Unified Communications system handles the sequence of operations from the time a user picks up a phone to make a call
-to the time the user ends the call by hanging up. <br>
+<mark>In Cisco’s Unified Communications architecture, Unified Communications Managers are what makes IP telephony possible. These hardware/software devices are the brains that handle IP call processing. The call-processing portion of a Unified Communications system handles the sequence of operations from the time a user picks up a phone to make a call
+to the time the user ends the call by hanging up.<mark> <br>
      
 ### There are three distinct Unified Communications Manager systems: 
 * __Cisco Unified Communications Manager (CUCM)__
@@ -156,9 +167,9 @@ __The next figure displays the four layers and the core components within each l
 ![Unified Communication Model](/images/ucModel.png)
 
 ### The infrastructure layer
-The Infrastructure layer of the Unified Communications Model is where you will find your routers, switches, and voice gateways. The Infrastructure layer is responsible for moving IP packets from the source to the destination.
-Because the Unified Communications Model is a converged network, multiple types of traffic are sent over the same infrastructure. Data, voice, and video traffic are all running over the same cabling and hardware in this layer. Because of the mixed traffic, there must be a way to distinguish voice and video from data and prioritize the types. Voice and video traffic are much more sensitive to delay on the network and ultimately must take priority over data. The Infrastructure layer typically incorporates quality of service (QoS) mechanisms to intelligently identify time-sensitive traffic and give it priority when there is congestion on the network.
-Security also plays a key role in the Infrastructure layer. All access-control and IP restrictions are implemented at this layer. Typically, access control lists (ACLs) are created and implemented to limit the type of TCP/UDP traffic and source IP addresses that can access the Call Control layer, which is where the CUCM resides.
+The Infrastructure layer of the Unified Communications Model is __where you will find your routers, switches, and voice gateways__. The Infrastructure layer is __responsible for moving IP packets from the source to the destination__.
+Because the Unified Communications Model is a converged network, multiple types of traffic are sent over the same infrastructure. Data, voice, and video traffic are all running over the same cabling and hardware in this layer. __Because of the mixed traffic, there must be a way to distinguish voice and video from data and prioritize the types__. __Voice and video traffic are much more sensitive__ to delay on the network and ultimately must take priority over data. The Infrastructure layer typically __incorporates quality of service (QoS)__ mechanisms to intelligently identify time-sensitive traffic and give it priority when there is congestion on the network.
+__Security also plays a key role in the Infrastructure layer__. All access-control and IP restrictions are implemented at this layer. Typically, __access control lists (ACLs) are created and implemented to limit the type of TCP/UDP traffic and source IP addresses that can access the Call Control layer__, which is where the CUCM resides.
 
 ### The Call Control layer
 Sitting on top of the Infrastructure layer is the Call Control layer. This is the heart of the Unified Communications system and is where the Call Manager is found. The CUCM is responsible for the following functions:
