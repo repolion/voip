@@ -250,15 +250,18 @@ Echo is the reflection of sound that arrives to the listener a period of time af
 <mark>VoIP devices do not support traditional DTMF digits by default. It may be necessary to allow your IP endpoints to use DTMF to communicate with non-VoIP-based services<mark>. DTMF-relay can be used to facilitate this conversion. There are several methods for configuring DTMF-relay. All of them require the use of DSPs to properly transport
 the DTMF tone uncompressed over an IP network. 
 
+>DTMF (dual tone multi frequency) is the signal to the phone company that you generate when you press an ordinary telephone's touch keys. With DTMF, each key you press on your phone generates two tones of specific frequencies. So that a voice can't imitate the tones, one tone is generated from a high-frequency group of tones and the other from a low frequency group.
+
 # Media Termination Points
 
 When using H.323 or SIP endpoints or gateways, you can use DSP resources to assist with the process of functions such as call holds, parks, transfers, and conferences. These voice services are all very commonly used in most CUCM implementations. These supplementary services are referred to as media termination points. The DSPs are used
-to either help “park” calls while on hold or parking or provide audio multiplexing into a single audible stream for conference calls
+to either help “park” calls while on hold or parking or provide audio multiplexing into a single audible stream for conference calls.
+
+>Call park is a method used to position callers in a unique slot. It as a reserved parking spot in a lot that has parking spaces numbered 1-100. This feature is commonly used in retail and hardware businesses, because the employees are constantly in different locations throughout these types of stores.
 
 # Using Voice Gateways to Connect a CUCM to a PBX
 <mark>A second design methodology for using voice gateways is used when companies are making the migration to a Cisco Unified Communications solution</mark>. The process of migrating
-away from a traditional PBX typically involves interconnecting the CUCM and PBX for a period of time. Some users may have new Cisco phones, while others might still have the older phones that connect to the legacy PBX. End users on one system need to be able to
-communicate easily with users on the other. <mark>In this situation, a voice gateway can be used to provide a common channel-signaling method</mark>. A digital trunk interface on the voice gateway connects to a digital trunk interface on the legacy PBX. 
+away from a traditional PBX typically involves interconnecting the CUCM and PBX for a period of time. Some users may have new Cisco phones, while others might still have the older phones that connect to the legacy PBX. End users on one system need to be able to communicate easily with users on the other. <mark>In this situation, a voice gateway can be used to provide a common channel-signaling method</mark>. A digital trunk interface on the voice gateway connects to a digital trunk interface on the legacy PBX. 
 
 ![CUCM to PBX](images/cucmToPbx.png)
 
@@ -284,6 +287,119 @@ In this example, a single POTS dial peer runs from the analog phone located on t
 
 ![VoIP Dial Peers](images/voipDialPeers.png)
 
-In this example, there is a VoIP dial peer for each side of the IP network. They are needed because each voice gateway requires a dial-peer configuration in order to identify the call source and destination endpoints.
+<mark>In this example, there is a VoIP dial peer for each side of the IP network. They are needed because each voice gateway requires a dial-peer configuration in order to identify the call source and destination endpoints.</mark>
+
+### Dial Peers and Call Legs
+<mark>Call legs are logical connections between dial-peer origination and termination points on IP networks.</mark> They associate with dial peers on a one-to-one basis. A call leg is considered to be either a POTS or a VoIP leg, depending on which network the call leg represents. Next Figure shows a VoIP and POTS call communication scenario where phone A is making a call to phone B.
+
+![Call Legs](images/callLegs.png)
+
+This example shows that every voice IP terminating device has a call leg associated with it. Any voice gateway will have two associated call legs/dial peers for each logical connection. By contrast, a POTS dial peer has only a single call leg/dial peer associated with it. This is because once the call is placed out on the PSTN, we don’t really have any control over how it is switched. Therefore, we have control over only one dial peer and, ultimately, one call leg.
+
+# Comparing Voice Gateway Communication Protocols
+<mark>Voice gateways provide a bridge between the Cisco Unified Communications Manager and either the PSTN or a legacy PBX</mark>. There are two types of voice gateways in the CUCM Express system. The voice gateway might reside on the same router as your CUCM Express software; this is known as an integrated voice gateway. If the PSTN trunks reside on the same hardware as the CUCM Express software, calls can be directly switched from the PSTN lines to the IP phones with little configuration. Figure 3.6 shows the integrated gateway setup, which requires no voice gateway protocol:
+
+#### Integrated Voice Gateway
+![integrated voice gateway](images/integratedVoiceGateway.png)<br><br>
+
+<mark>The separated voice gateway sits on a different router than the CUCM Express software. If the voice gateway is separate, you need a signaling protocol to transport
+the calls across the IP network between the CUCM and the voice gateway.</mark> Next Figure depicts the separated voice gateway architecture and the link that requires a voice gateway signaling protocol.
+
+#### Separated Voice Gateway
+![integrated voice gateway](images/separatedVoiceGateway.png)
+
+<mark>The Unified Communications system supports four methods of gateway communication. Let’s briefly look at these four gateway protocols.</mark>
+
+* __H.323 Gateway Protocol__
+* __The SIP Gateway Protocol__
+* __The MGCP Gateway Protocol__
+* __The SCCP Gateway Protocol__
+
+## The H.323 Gateway Protocol
+H.323 is an ITU standards-based peer-to-peer protocol. <mark>It is a bundle of multiple protocols signaling and controlling voice and video data</mark>.
+
+The differents subprotocols has a different functionality
+
+* __RAS__ : Messaging protocol used by the CUCM for gatekeeper discovery and registration. Also used to pass database lookup and CAC information.
+* __H.245__ : Performs call control functions.
+* __Voice Codecs (G.711, G.729, etc.)__ : Performs encoding/decoding of voice streams.
+* __H.225__ : Performs call setup and codec negotiation over TCP 1720.
+
+## The SIP Gateway Protocol
+
+<mark>__Session Initiation Protocol (SIP)__</mark> is an IETF standard gateway communication method that uses a peer-to-peer architecture. It can run over TCP or UDP. By default, SIP uses UDP port 5060 when configured on a CUCM. <mark>Because it is a peer-to-peer system, the intelligence, such as dial plans and route patterns, resides on the voice gateway sides</mark>. It also means that the voice gateway configuration is more complex than with the client- server gateway protocols. SIP is considered the successor to H.323 and is in increasingly widespread use in new environments. But unlike H.323, SIP is merely responsible for call setup and control. <mark>Other protocols outside of SIP such as __UDP/RTP/RTCP are ultimately__ responsible for the transport of the voice stream.</mark>
+
+## The MGCP Gateway Protocol
+
+<mark>The Media Gateway Control Protocol (MGCP) is a client-server architecture, which means all of the intelligence, such as dial peers and route plans, resides on the CUCM</mark>. This centralized call control model means the gateway simply facilitates the voice routing functions that the CUCM determines. It is an IETF standard protocol and is the newest of the standards-based voice gateway signaling protocols. It is also one of the simplest
+to configure on the voice gateway. Because of its client-server nature, the bulk of the configuration is performed on the CUCM and very little is required on the router itself. <mark>MGCP can run over either TCP or UDP. Signaling information between the CUCM and gateway runs over port UDP/2427 and TCP/2428 by default</mark>.
+
+## The SCCP Gateway Protocol
+
+<mark>__The Skinny Client Control Protocol (SCCP)__ is a Cisco proprietary gateway protocol. It uses a lightweight client-server architecture that allows the CUCM to maintain the dial plans and route patterns centrally and uses the gateway as a method of transport, similar to MGCP. Because SCCP is proprietary, your voice gateway must be a Cisco device. You may want to look into using SCCP as your voice gateway protocol, because it provides additional features that are not available with the standards-based protocols.</mark> The SCCP protocol runs over TCP port 2000.
+
+# An Overview of Voice and Video Transport Protocols
+Data payloads such as voice and video that our Cisco Unified Communications Systems facilitate require specific protocols to be handled properly. There are three protocols that are used in Cisco VoIP environments: 
+
+* __Real-time Transport Protocol__
+* __Compressed Real-time Transport Protocol__
+* __Real-time Control Transport Protocol__
+
+
+## The Real-Time Transport Protocol
+
+<mark>The foundation of all voice and video communication over an IP network begins with the Real-time Transport Protocol (RTP)</mark>. RTP is an IETF RFC 1889 and 3050 standard <mark>for the delivery of unicast and multicast voice/video streams. RTP almost always uses UDP for transport. UDP, unlike TCP, is an unreliable best-effort service. That may sound like a bad thing, but in reality it is the most efficient method for transport of streaming data. A best- effort service such as UDP does not attempt to retransmit or reorder packets as TCP does. If you think about it, once a voice packet is lost in transit, there is no reason to attempt to retransmit it, because once the packet reaches its destination, the sound wave contained in the packet would not make sense to the end user if it is delivered out of order. UDP also does not provide any flow control or error correction.</mark> This cuts down on the overhead of each datagram and therefore is much more efficient.
+The RTP header does offer some important information about its payload in each encapsulated packet.
+
+## Compressed Real-time Transport Protocol ...
+
+## Real-time Control Transport Protocol ...
+
+# Comparing VoIP Endpoint Signaling Protocols
+
+<mark>VoIP uses IP for routing decisions, UDP for packet delivery, and RTP/RTCP for real-time transport. VoIP endpoint signaling protocols are responsible for locating endpoints, negotiation of various functions, and the setup and teardown of voice calls. SCCP and SIP are very important. Each of these protocols differs in architecture, call control, and other services.<mark>
+
+## SCCP
+<mark>The Skinny Call Control Protocol (SCCP) is a Cisco proprietary voice signaling protocol based on a client-server architecture. The clients can be any of the Cisco endpoint phones </mark>such as the Cisco 7971 or Cisco IP Communicator softphone. <mark>The server in the architecture is our Cisco Unified Communications Manager. All SCCP clients must communicate with the CUCM in order to place a call. In this regard, the phone is essentially a “dumb” device that fully relies on the CUCM to give it intelligence for call setup and teardown. So while the CUCM handles the call setup control, the phone is responsible only for the processing of RTP/RTCP packets. SCCP messages are transported over TCP port 2000. Because SCCP uses TCP for transport, messages can utilize TCP functionality such as error correction and guaranteed delivery of packets.<mark>
+<mark>When an SCCP-enabled phone registers with it, the CUCM requests certain information from the phone: IP address, station ID, device types, and the codecs the phone can understand. The CUCM stores this information so it knows how to best handle the setup of calls to a particular endpoint. The CUCM uses SCCP messages for keepalives to the client phones. A keepalive is a message sent by one device to another at specific intervals to verify that communication between the two is functioning. If the CUCM does not receive a certain number of keepalive responses over a period of time, the stored endpoint information is cleared from the CUCM memory until it reconnects</mark>, at which time the phone will have to go through the information-gathering process again.
+<mark>Once the phone capabilities are registered on the CUCM, SCCP is used again to send out all the necessary information that the phone requires, including its phone number, button templates, time/date synchronization, and any other configurable options and displays</mark>.
+<mark>Messages are constantly sent between the client phone and the CUCM for everything that a user does on a phone. For example, when a user picks up the handset, an off-hook notification message is sent from the phone via SCCP to the CUCM. The CUCM then sends everything the phone should do in response to going off-hook. These include the message the LCD is to display, the softkeys that are to be displayed, and, of course, adial-tone signal. So clearly, SCCP is very much a client-server technology, because control of the phone is strictly maintained by the Communications Manager. It is important to keep in mind that the client-server model between the endpoint and CUCM is only for signaling; the actual voice packets encapsulated in RTP and the RTCP control data are transported directly from one endpoint to the other.</mark>
+
+![SCCP RTP RTTP](images/sccpRtpRttp.png)
+
+## SIP
+
+<mark>The Session Initiation Protocol (SIP) differs from SCCP in several ways. For one, it is an IETF RFC 3261 standard instead of the Cisco proprietary signaling protocol.</mark> This means that third-party phones and applications can be used on the CUCM system using SIP. The RFC for SIP states that the protocol was designed for the creation and management of multimedia sessions over the Internet. Its architecture is a peer-to-peer model in theory. Next Figure shows how both SIP and RTP/RTCP communicate directly between endpoints.
+
+![SIP](images/sip.png)
+
+SIP phones working in a Cisco Unified Communications environment are set up in SIP proxy mode. The CUCM SIP proxy is used for making requests on behalf of endpoints. This helps to facilitate policy enforcement by the CUCM administrator. When the SIP phone is set up to work in a Cisco UC environment, the SIP proxy IP address is configured to be the IP address of the CUCM Express. Next Figure shows how the CUCM is used as an SIP proxy.
+
+![CUCM SIP Proxy](images/sipProxy.png)
+
+<mark>As soon as an SIP session is established between the two SIP endpoints, the actual voice stream flows between the users. The voice stream is managed by RTP and RTCP. The RTP/ RTCP stream is identical whether you are using SIP or SCCP for signaling. This is because the voice streams use the signaling protocols only for setup and teardown. As soon as SIP sets up the call, RTC/RTCP proceeds independently from SIP.</mark>
+
+# Voice Signaling Protocols in Review
+It is very important that you be able to successfully compare and contrast the different types of gateway and endpoint signaling protocols. Table 3.2 displays each protocol and its characteristics.
+
+![Voice Signaling Protocols](images/voiceSignalingProtocols.png)
+
+# Comparing the Common Voice Codecs
+<mark>Voice codecs are responsible for the encoding and decoding of voice signals. They also can compress the digital signal so that more voice calls can be sent across a finite amount of bandwidth.</mark>
+There are two protocols that are the most common voice codecs used:
+* __G.711__
+* __G.729__
+
+## G.711
+<mark>The G.711 ITU standard codec is also known as pulse code modulation (PCM). This codec samples voice signals at a frequency of 8,000 samples per second. It provides the best quality the most commonly used codecs, but that comes at a price. There are two common types of G.711 binary conversion techniques on most voice systems. The first G.711 type is called u-law and is most commonly used in the United States, Canada, and Japan. The second G.711 binary conversion type is called a-law and is used just about everywhere else on the planet. It is important to note that the two PCM techniques are not compatible with each other and need to be transcoded for interoperability.
+Each phone call on the network requires 64 Kbps on the wire. Let’s do some quick
+math to see how much compression is being used on the G.711 codec. Using Dr. Nyquist’s formula, we will get 8,000 voice samples each second. Each of these samples is 8 bits in length. So if we multiply 8,000 × 8, we get 64,000 bps, or 64 Kbps. This means that G.711 uses no compression when it encodes the voice stream! If you have plenty of bandwidth, G.711 is the way to go. If you are running voice over a low-speed WAN link or are planning to use wireless IP phones, then you may want to consider a codec that compresses the call into a smaller data stream.</mark>
+
+## G.729
+The G.729 ITU standard codec samples the voice signal at the same rate as G.711 of 8,000 samples per second per the Nyquist rate theorem. Also like G.711, the bit rate is fixed at 8 per sample. <mark>The major difference between G.711 and the variations of G.729 has to do with compression.This audio waveform prediction and synthesization degrades the quality of the voice signal by making the speaker’s voice sound robotic. But the G.729’s use of CS-ACELP allows the compressed voice signal to require only 8 Kbps per call as opposed to 64 Kbps required per stream of G.711.</mark> This means that eight voice calls using the G.729 codec can be made in the space of just one G.711 codec call. Not a bad tradeoff when you are attempting to run voice over low-speed WAN links!
+
+## G.729a ...
+
+## iLBC ...
 
 
