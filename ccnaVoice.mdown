@@ -396,8 +396,73 @@ math to see how much compression is being used on the G.711 codec. Using Dr. Nyq
 ## G.729
 The G.729 ITU standard codec samples the voice signal at the same rate as G.711 of 8,000 samples per second per the Nyquist rate theorem. Also like G.711, the bit rate is fixed at 8 per sample. <mark>The major difference between G.711 and the variations of G.729 has to do with compression.This audio waveform prediction and synthesization degrades the quality of the voice signal by making the speaker’s voice sound robotic. But the G.729’s use of CS-ACELP allows the compressed voice signal to require only 8 Kbps per call as opposed to 64 Kbps required per stream of G.711.</mark> This means that eight voice calls using the G.729 codec can be made in the space of just one G.711 codec call. Not a bad tradeoff when you are attempting to run voice over low-speed WAN links!
 
-## G.729a ...
+## G.729a 
+The G.729a ITU standard codec is very similar to G.729. They use the same 8Kbps bandwidth consumption per call. Where the two codecs differ is in the type of algorithm used to encode the voice signal. G.729 is considered a high-complexity codec and G.729 a medium-complexity codec. <br>
+The next table displays the complexity level of several of the more popular codecs available today.
 
-## iLBC ...
+![G729](images/g729.png)
+
+<mark>All codecs are classified as either medium or high complexity. These categories are important when dealing with DSPs. DSPs are required for translating digital signals to analog and for transcoding between different digital codecs. High-complexity codecs use more DSP processing power than medium- complexity codecs. Because DSP resources are finite, you may need to move from G.729 to G.729a to free up those DSP resources. The downside is that the voice quality of G.729a compared to G.729 is marginally worse.</mark>
+
+# iLBC
+The <mark>Internet Low Bandwidth Codec</mark> is fairly new to the voice world and still waiting to fully catch on. The codec uses either 20ms or 30ms voice samples, and they end up consuming 15.2 Kbps or 13.3 Kbps, respectively. One other <mark>major benefit the iLBC touts is its ability to handle moderate amounts of packet loss. If some of your VoIP packets are lost in transit, iLBC’s built-in techniques help the call continue with little notice to the user.</mark>
+
+-----
+
+# Which Codec Is Right for You?
+In some instances there is a right or wrong choice in using one codec over another. But most of the time, it really depends on the business requirements. Here are <mark>some considerations to help you in making a codec decision:</mark>
+### What do my endpoints support? 
+Cisco phones support G.711 and G.729. Newer phones also support the iLBC codec. So in Cisco environments you are going to use one of these three.
+### How many DSP channels will I need? 
+DSP chips contain multiple channels with which to handle codec transcoding. If you find yourself having to constantly transcode one codec into another, you probably made a poor codec decision. DSP resources are not cheap. <mark>If you can limit transcoding, you should.</mark>
+### How much voice quality do I need? 
+Depending on your users and the environment they are used in, voice quality may or may not be a major factor in your decision-making process. A tried but true method of determining the quality of the audio of a voice codec is called the <mark>__Mean Opinion Score (MOS)__</mark>. Developed by the ITU, <mark>this quality-measurement system rates the quality of voice streams for a particular codec.It is actually very nonscientific, because the MOS is an average “opinion” of a group of people who listen to the same sentence for each codec tested. These listeners then rank the voice quality on a scale of 1 to 5.</mark>  A score of 1 is the worst quality, and a score of 5 is excellent quality.
+Next table lists the codecs viewed and each one’s MOS score.
+
+![MOS Score](images/mos.png)
+
+### How much bandwidth do I have to play with?
+If you are going to run voice over low- bandwidth WAN links, then you should definitely look at codecs that use at least some
+compression.
+### Which codec works best for my environment? 
+If you have a high amount of packet loss on your network, you may want to look into the codecs that offer the best recoverability when VoIP packets are lost in transit.
+
+# Essentials
+__Know the Cisco Unified Communications Model.__ 
+The four layers of the communications model are the Infrastructure, Call Control, Applications, and Endpoints layers. Each layer plays a specific role in the Unified Communications system.<br>
+
+__Understand how voice gateways connect to the PSTN and legacy PBX systems.__ 
+Voice gateways bridge an IP network to a non-IP legacy network, either of which may be public or private.<br>
+
+__Understand the role DSPs play in the Unified Communications system.__
+ DSPs provide analog-to-digital translation, codec transcoding, echo cancellation, DTMF relay services, and media termination points. DSP farms typically reside on voice gateway routers.<br>
+
+__Understand the difference between POTS and VoIP dial peers.__ 
+POTS dial peers are traditional PSTN technology, while VoIP dial peers connect to endpoints using IP.<br>
+
+__Know how dial peers and call legs are associated with each other and where they initiate and terminate on the voice network.__
+A call leg is always associated with a dial peer. It marks a logical point along the path of a phone call.<br>
+
+__Understand the protocols that are responsible for signaling between the CUCM and a voice gateway__. 
+The H.323, SIP, MGCP, and SCCP protocols can be used for voice gateway signaling. Each protocol has different setups that change the way the dial peers and route plans are located.<br>
+
+__Know which protocol is responsible for the transport of the actual voice payloads.__
+RTP is used for the transport of voice packets on a Unified Communications system. RTCP is responsible for out-of-band monitoring of the RTP packets.<br>
+
+__Know which protocol is used for compression of voice packets.__
+cRTP header compression can be used to shrink the IP, UDP, and RTP headers to decrease bandwidth consumption.<br>
+
+__Understand the two Cisco Unified Communications endpoint signaling protocols.__
+SCCP is a Cisco proprietary protocol that uses client-server architecture. SIP is an IETF standards-based protocol that uses peer-to-peer architecture. SIP is used in a proxy server mode by the CUCM.<br>
+
+__Be able to compare and contrast all voice signaling protocols.__
+Understand the differences in standards, architecture, call control, and CUCM uses for SCCP, SIP, H.323, and MGCP.<br>
+
+__Understand the most common voice codecs and when to use them.__
+The three most common codecs are G.711, G.729, and G.729a. Each codec has advantages and disadvantages depending on the network speed it runs on.<br>
+
+__Understand when specific codecs are either required or highly desirable.__
+ It is important to know which codec is required in situations where fax machines and fax modems are used. Also, when using voice over low-speed WAN links, you need to understand why G.729 should be used for voice and G.711 for MoH.<br>
+
 
 
